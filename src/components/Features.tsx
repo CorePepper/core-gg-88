@@ -1,4 +1,4 @@
-import { Star, ThumbsUp, Zap } from "lucide-react";
+import { Star, ThumbsUp, Zap, ArrowRight } from "lucide-react";
 
 const features = [
   {

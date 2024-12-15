@@ -28,13 +28,16 @@ const Navigation = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-8">
-            {["products", "team", "about", "contact"].map((item) => (
+            {["about", "products", "team", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 className="text-white hover:text-gold transition-colors capitalize"
               >
-                {item}
+                {item === "about" ? "会社概要" :
+                 item === "products" ? "Coreゲーム製品" :
+                 item === "team" ? "e-sports team紹介" :
+                 "お問い合わせ"}
               </button>
             ))}
           </div>
@@ -44,13 +47,16 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
-              {["products", "team", "about", "contact"].map((item) => (
+              {["about", "products", "team", "contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-white hover:text-gold transition-colors capitalize text-left"
+                  className="text-white hover:text-gold transition-colors text-left"
                 >
-                  {item}
+                  {item === "about" ? "会社概要" :
+                   item === "products" ? "Coreゲーム製品" :
+                   item === "team" ? "e-sports team紹介" :
+                   "お問い合わせ"}
                 </button>
               ))}
             </div>
