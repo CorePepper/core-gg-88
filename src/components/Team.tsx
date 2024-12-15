@@ -1,4 +1,4 @@
-import { Trophy, Mail } from "lucide-react";
+import { Trophy, Mail, ArrowRight } from "lucide-react";
 
 const achievements = [
   "2023年度全国大会優勝",
@@ -13,7 +13,7 @@ const Team = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy" />
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/2ee2326b-d714-47eb-ac30-f75cb76e2126.png')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/0f84dfdf-dee5-4ca6-933c-2f5251bbb9e1.png')] bg-cover bg-center opacity-20" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

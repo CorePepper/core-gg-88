@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
+import Reviews from "@/components/Reviews";
+import CTASection from "@/components/CTASection";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -10,7 +12,9 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Features />
+      <Reviews />
       <Team />
+      <CTASection />
       <Contact />
     </div>
   );
