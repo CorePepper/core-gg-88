@@ -20,8 +20,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white">合同会社</span>
-            <span className="text-gold">CORE</span>
+            <span className="text-white">CORE</span>
+            <span className="text-gold">E-Sports</span>
           </h1>
           <p className="text-2xl md:text-3xl text-gold font-light mb-4">
             日本から世界へ、ゲームと革新を届ける
