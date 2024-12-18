@@ -97,7 +97,7 @@ const Navigation = () => {
                     <button
                       key={tab.id}
                       onClick={() => scrollToSection(tab.id)}
-                      className={`px-6 py-3 text-2xl font-bold w-full text-center transition-colors border-b-2 border-black ${
+                      className={`px-6 py-3 text-2xl font-bold w-full text-center transition-colors border-b-2 border-black/20 ${
                         activeTab === tab.id 
                           ? 'text-[#D4AF37]' 
                           : 'text-[#1A202C] hover:text-[#D4AF37]'
