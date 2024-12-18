@@ -55,7 +55,28 @@ const Navigation = () => {
           
           <div className="flex justify-end flex-1">
             <div className="flex space-x-8 items-center">
-              {tabs.map((tab) => (
+              <div className="flex items-center">
+                <a
+                  href="https://x.com/Core_official__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-twitter hover:text-twitter-dark transition-colors mr-2"
+                >
+                  <TwitterIcon className="h-5 w-5 fill-current" />
+                </a>
+                <button
+                  onClick={() => scrollToSection("products")}
+                  className={`relative px-1 py-2 transition-colors ${
+                    activeTab === "products" ? "text-gold" : "text-white/80 hover:text-white"
+                  }`}
+                >
+                  {tabs[0].label}
+                  {activeTab === "products" && (
+                    <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gold" />
+                  )}
+                </button>
+              </div>
+              {tabs.slice(1).map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
@@ -69,14 +90,6 @@ const Navigation = () => {
                   )}
                 </button>
               ))}
-              <a
-                href="https://x.com/Core_official__"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-4 text-twitter hover:text-twitter-dark transition-colors"
-              >
-                <TwitterIcon className="h-5 w-5 fill-current" />
-              </a>
             </div>
           </div>
         </div>
