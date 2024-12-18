@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
-import { TwitterIcon } from "lucide-react";
+import { TwitterIcon, Menu } from "lucide-react";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setActiveTab(id);
+      setIsMenuOpen(false); // Close menu after clicking
     }
   };
 
-  // URLのハッシュが変更された時にアクティブタブを更新
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.slice(1);
@@ -25,7 +26,6 @@ const Navigation = () => {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  // 初期表示時にURLのハッシュをチェック
   useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
@@ -53,41 +53,42 @@ const Navigation = () => {
             <div className="text-gold text-xl font-bold">CORE</div>
           </div>
           
-          <div className="flex justify-end flex-1">
-            <div className="flex space-x-8 items-center">
-              <div className="flex items-center">
-                <a
-                  href="https://x.com/Core_official__"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-twitter hover:text-twitter-dark transition-colors mr-4"
-                >
-                  <TwitterIcon className="h-5 w-5 fill-current" />
-                </a>
-                <button
-                  onClick={() => scrollToSection("products")}
-                  className={`relative px-1 py-2 transition-colors ${
-                    activeTab === "products" ? "text-gold" : "text-white/80 hover:text-white"
-                  }`}
-                >
-                  {tabs[0].label}
-                  {activeTab === "products" && (
-                    <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gold" />
-                  )}
-                </button>
-              </div>
-              {tabs.slice(1).map((tab) => (
+          {/* Twitter and Hamburger Menu Icons */}
+          <div className="flex items-center gap-4">
+            <a
+              href="https://x.com/Core_official__"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-twitter hover:text-twitter-dark transition-colors"
+            >
+              <TwitterIcon className="h-5 w-5 fill-current" />
+            </a>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white hover:text-gold transition-colors"
+              aria-label="Toggle menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Mobile Menu Overlay */}
+          <div
+            className={`fixed inset-0 bg-navy/95 z-40 transition-transform duration-300 ease-in-out ${
+              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
+            style={{ top: '64px' }} // Height of the navbar
+          >
+            <div className="flex flex-col items-center pt-8 space-y-6">
+              {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.id)}
-                  className={`relative px-1 py-2 transition-colors ${
-                    activeTab === tab.id ? "text-gold" : "text-white/80 hover:text-white"
+                  className={`px-4 py-2 text-lg transition-colors ${
+                    activeTab === tab.id ? 'text-gold' : 'text-white hover:text-gold'
                   }`}
                 >
                   {tab.label}
-                  {activeTab === tab.id && (
-                    <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gold" />
-                  )}
                 </button>
               ))}
             </div>
