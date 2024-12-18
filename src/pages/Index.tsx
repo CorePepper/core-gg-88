@@ -2,9 +2,9 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Reviews from "@/components/Reviews";
+import CTASection from "@/components/CTASection";
 import Team from "@/components/Team";
 import About from "@/components/About";
-import CTASection from "@/components/CTASection";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -14,9 +14,9 @@ const Index = () => {
       <Hero />
       <Features />
       <Reviews />
+      <CTASection />
       <Team />
       <About />
-      <CTASection />
       <Contact />
     </div>
   );
