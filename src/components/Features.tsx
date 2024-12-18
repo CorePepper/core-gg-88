@@ -28,12 +28,12 @@ const Features = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           <span className="text-gold">CORE</span>
           <span className="text-white">開発製品</span>
         </h2>
         
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-16">
           <h3 className="text-3xl md:text-4xl text-gold font-bold mb-4 animate-glow drop-shadow-lg">
             Core指サックプレミアム
           </h3>
