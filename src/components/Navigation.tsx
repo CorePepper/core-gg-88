@@ -34,10 +34,10 @@ const Navigation = () => {
   }, []);
 
   const tabs = [
-    { id: "products", label: "Coreゲーム製品" },
-    { id: "team", label: "E-Sports Team紹介" },
-    { id: "about", label: "会社概要" },
-    { id: "contact", label: "お問い合わせ" }
+    { id: "products", label: "Product" },
+    { id: "team", label: "Team" },
+    { id: "about", label: "Company" },
+    { id: "contact", label: "Contact" }
   ];
 
   return (
