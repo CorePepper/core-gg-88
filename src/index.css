@@ -80,3 +80,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Section visibility control */
+section[id] {
+  scroll-margin-top: 4rem;
+}
