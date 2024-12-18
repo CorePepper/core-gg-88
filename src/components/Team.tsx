@@ -23,19 +23,28 @@ const Team = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-navy-light/80 backdrop-blur-sm p-8 rounded-lg mb-8">
-            <h3 className="text-2xl font-semibold text-gold mb-4 flex items-center">
-              <Trophy className="mr-2" /> 主な実績
-            </h3>
-            <ul className="space-y-4">
-              {achievements.map((achievement, index) => (
-                <li
-                  key={index}
-                  className="text-white flex items-center before:content-[''] before:w-2 before:h-2 before:bg-gold before:rounded-full before:mr-3"
-                >
-                  {achievement}
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-start">
+              <div className="flex-1">
+                <h3 className="text-2xl font-semibold text-gold mb-4 flex items-center">
+                  <Trophy className="mr-2" /> 主な実績
+                </h3>
+                <ul className="space-y-4">
+                  {achievements.map((achievement, index) => (
+                    <li
+                      key={index}
+                      className="text-white flex items-center before:content-[''] before:w-2 before:h-2 before:bg-gold before:rounded-full before:mr-3"
+                    >
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <img
+                src="/lovable-uploads/グループ 1.png"
+                alt="Team achievements"
+                className="w-64 h-auto ml-8 object-contain"
+              />
+            </div>
           </div>
 
           <div className="text-center">
