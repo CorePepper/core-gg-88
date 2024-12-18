@@ -15,7 +15,7 @@ const Team = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy" />
         <div 
           className="absolute inset-2 bg-[url('/lovable-uploads/7e9cabb4-c89b-4b73-8ba0-7f4885c327ed.png')] 
-          bg-cover bg-center opacity-20 w-[90%] h-[90%] object-cover mx-auto"
+          bg-cover bg-center opacity-20 w-[80%] h-[80%] object-cover mx-auto"
         />
       </div>
 
