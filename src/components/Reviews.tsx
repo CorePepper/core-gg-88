@@ -20,8 +20,14 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section className="py-20 bg-navy">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-navy relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy/80" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/0f17d324-4e96-4f45-91f4-229883758a92.png')] bg-cover bg-center opacity-30" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           <span className="text-white">多くのプレイヤーが認めた</span>
           <span className="text-gold">クオリティ</span>
@@ -31,7 +37,7 @@ const Reviews = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-navy-light p-6 rounded-lg hover:transform hover:-translate-y-1 transition-transform"
+              className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg hover:transform hover:-translate-y-1 transition-transform"
             >
               <div className="flex items-center mb-4">
                 {[...Array(review.rating)].map((_, i) => (
