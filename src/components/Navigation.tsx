@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Twitter } from "lucide-react";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
@@ -53,7 +54,7 @@ const Navigation = () => {
           </div>
           
           <div className="flex justify-end flex-1">
-            <div className="flex space-x-8">
+            <div className="flex space-x-8 items-center">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -68,6 +69,14 @@ const Navigation = () => {
                   )}
                 </button>
               ))}
+              <a
+                href="https://x.com/Core_official__"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4 text-white hover:text-gold transition-colors"
+              >
+                <Twitter className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>
