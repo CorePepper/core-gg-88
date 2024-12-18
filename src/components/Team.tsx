@@ -42,7 +42,7 @@ const Team = () => {
               <img
                 src="/lovable-uploads/45af26eb-fd78-4d95-bbea-58374d6d568e.png"
                 alt="Team logo"
-                className="w-68 h-auto ml-8 object-contain"
+                className="w-64 h-auto ml-8 object-contain"
               />
             </div>
           </div>
