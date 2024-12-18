@@ -1,5 +1,6 @@
-import { Star } from "lucide-react";
+import { Star, ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import { useNavigate } from "react-router-dom";
 
 const reviews = [
   {
@@ -35,10 +36,20 @@ const reviews = [
 ];
 
 const Reviews = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-navy">
       <Navigation />
       <div className="container mx-auto px-4 py-20">
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center text-gold hover:text-gold-light transition-colors mb-8"
+        >
+          <ArrowLeft className="mr-2 h-5 w-5" />
+          戻る
+        </button>
+
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">プロ選手の声</h1>
           <p className="text-xl text-gold">プロのプレイヤーから寄せられた体験談</p>
