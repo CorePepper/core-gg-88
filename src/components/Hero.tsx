@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/90 to-navy/80" />
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/2912a528-9194-4836-a562-117852dd865c.png')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/50f946a5-73d6-449b-b7de-0b42982cab5a.png')] bg-cover bg-center opacity-30" />
       </div>
 
       {/* Content */}
