@@ -14,7 +14,9 @@ const CTASection = () => {
           </h2>
           
           <a
-            href="#"
+            href="https://amzn.asia/d/ghIgPyc"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
           >
             Amazonで購入する
