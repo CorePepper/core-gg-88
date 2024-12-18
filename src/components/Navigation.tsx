@@ -43,9 +43,15 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 w-full bg-navy/90 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="text-gold text-xl font-bold">CORE</div>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/8a96f1e6-ff15-4a15-994a-e0237be603a3.png" 
+              alt="Core Logo" 
+              className="h-6 w-auto mr-2 object-contain"
+            />
+            <div className="text-gold text-xl font-bold">CORE</div>
+          </div>
           
-          {/* タブメニュー */}
           <div className="flex justify-end flex-1">
             <div className="flex space-x-8">
               {tabs.map((tab) => (
