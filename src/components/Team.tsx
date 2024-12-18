@@ -13,10 +13,6 @@ const Team = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy" />
-        <div 
-          className="absolute inset-2 bg-[url('/lovable-uploads/7e9cabb4-c89b-4b73-8ba0-7f4885c327ed.png')] 
-          bg-cover bg-center opacity-50 w-[80%] h-[80%] object-cover mx-auto"
-        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
