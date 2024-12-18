@@ -1,4 +1,5 @@
 import { Star, ThumbsUp, Zap, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -21,7 +22,6 @@ const features = [
 const Features = () => {
   return (
     <section id="products" className="py-20 bg-navy-light relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy/80 z-10" />
         <div className="absolute inset-0 bg-[url('/lovable-uploads/61ef5862-80bb-417a-ae78-f5d44d392fb4.png')] bg-cover bg-center opacity-30 scale-90" />
@@ -66,15 +66,13 @@ const Features = () => {
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
           
-          <a
-            href="https://api.example.com/reviews"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/reviews"
             className="inline-flex items-center px-8 py-3 bg-white text-navy font-semibold rounded-full border-2 border-gold hover:bg-gray-200 transition-colors group mt-4"
           >
             プロ選手の声
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
