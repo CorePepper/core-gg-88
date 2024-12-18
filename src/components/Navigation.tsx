@@ -88,7 +88,7 @@ const Navigation = () => {
           {isMenuOpen && (
             <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" style={{ top: '64px' }}>
               <div 
-                className={`fixed right-0 top-16 h-[calc(100vh-64px)] w-full max-w-sm bg-navy shadow-lg transform transition-transform duration-300 ease-in-out ${
+                className={`fixed right-0 top-16 h-[calc(100vh-64px)] w-full max-w-sm bg-[#FFFBEA] shadow-lg transform transition-transform duration-300 ease-in-out ${
                   isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
               >
@@ -98,7 +98,9 @@ const Navigation = () => {
                       key={tab.id}
                       onClick={() => scrollToSection(tab.id)}
                       className={`px-6 py-4 text-lg w-full text-center transition-colors ${
-                        activeTab === tab.id ? 'text-gold' : 'text-white hover:text-gold'
+                        activeTab === tab.id 
+                          ? 'text-[#D4AF37]' 
+                          : 'text-[#1A202C] hover:text-[#D4AF37]'
                       }`}
                     >
                       {tab.label}
