@@ -5,6 +5,18 @@ const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // スクロール制御
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -73,26 +85,29 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Overlay */}
-          <div
-            className={`fixed inset-0 bg-navy/95 z-40 transition-transform duration-300 ease-in-out ${
-              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-            }`}
-            style={{ top: '64px' }} // Height of the navbar
-          >
-            <div className="flex flex-col items-center pt-8 space-y-6">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => scrollToSection(tab.id)}
-                  className={`px-4 py-2 text-lg transition-colors ${
-                    activeTab === tab.id ? 'text-gold' : 'text-white hover:text-gold'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+          {isMenuOpen && (
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" style={{ top: '64px' }}>
+              <div 
+                className={`fixed right-0 top-16 h-[calc(100vh-64px)] w-full max-w-sm bg-navy shadow-lg transform transition-transform duration-300 ease-in-out ${
+                  isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                }`}
+              >
+                <div className="flex flex-col items-center justify-center h-full py-8 space-y-6">
+                  {tabs.map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => scrollToSection(tab.id)}
+                      className={`px-6 py-4 text-lg w-full text-center transition-colors ${
+                        activeTab === tab.id ? 'text-gold' : 'text-white hover:text-gold'
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </nav>
