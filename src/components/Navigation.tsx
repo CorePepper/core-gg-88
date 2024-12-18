@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Navigation = () => {
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState("products");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -33,9 +33,9 @@ const Navigation = () => {
   }, []);
 
   const tabs = [
-    { id: "about", label: "会社概要" },
     { id: "products", label: "Coreゲーム製品" },
     { id: "team", label: "E-Sports Team紹介" },
+    { id: "about", label: "会社概要" },
     { id: "contact", label: "お問い合わせ" }
   ];
 
