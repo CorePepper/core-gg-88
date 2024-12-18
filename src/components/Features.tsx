@@ -49,7 +49,7 @@ const Features = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 flex flex-col items-center">
           <a
             href="https://amzn.asia/d/ghIgPyc"
             target="_blank"
@@ -64,7 +64,7 @@ const Features = () => {
             href="https://api.example.com/reviews"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3 bg-white text-navy font-semibold rounded-full border-2 border-gold hover:bg-gray-200 transition-colors group mt-4 block mx-auto"
+            className="inline-flex items-center px-8 py-3 bg-white text-navy font-semibold rounded-full border-2 border-gold hover:bg-gray-200 transition-colors group mt-4"
           >
             プロ選手の声
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
