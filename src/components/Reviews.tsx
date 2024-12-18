@@ -16,7 +16,6 @@ const reviews = [
     rating: 5,
     text: "耐久性が高く、長期間使用できるのが魅力です。",
   },
-  // Add more reviews as needed
 ];
 
 const Reviews = () => {
