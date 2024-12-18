@@ -24,7 +24,7 @@ const Features = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy/80 z-10" />
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/61ef5862-80bb-417a-ae78-f5d44d392fb4.png')] bg-cover bg-center opacity-30 scale-75" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/61ef5862-80bb-417a-ae78-f5d44d392fb4.png')] bg-cover bg-center opacity-30" />
       </div>
 
       <div className="container mx-auto px-4 relative z-20">
