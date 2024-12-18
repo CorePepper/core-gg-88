@@ -1,10 +1,12 @@
 import { Trophy, Mail, ArrowRight } from "lucide-react";
 
 const achievements = [
-  "2023年度全国大会優勝",
-  "アジア大会準優勝",
-  "国際大会出場権獲得",
-  "プロリーグ年間MVP受賞",
+  "KOPL S4 MIDseason Final 2位",
+  "KOPL S4 Play Off 3位",
+  "KOPL Grand Final 3位",
+  "荒野Championship 決勝 8位",
+  "KOPL S5 Play Off 1位",
+  "KOPL S5 MIDseason M1 Final 6位",
 ];
 
 const Team = () => {
