@@ -20,8 +20,14 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="products" className="py-20 bg-navy-light">
-      <div className="container mx-auto px-4">
+    <section id="products" className="py-20 bg-navy-light relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy/80 z-10" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/61ef5862-80bb-417a-ae78-f5d44d392fb4.png')] bg-cover bg-center opacity-30" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-20">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           <span className="text-white">Core Gaming</span>
           <span className="text-gold">製品</span>
@@ -38,7 +44,7 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-navy p-6 rounded-lg hover:bg-navy/80 transition-colors"
+              className="bg-navy/80 backdrop-blur-sm p-6 rounded-lg hover:bg-navy/70 transition-colors"
             >
               <feature.icon className="w-8 h-8 text-gold mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">
