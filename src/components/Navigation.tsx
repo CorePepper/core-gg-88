@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Twitter } from "lucide-react";
+import { TwitterIcon } from "lucide-react";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
@@ -75,7 +75,7 @@ const Navigation = () => {
                 rel="noopener noreferrer"
                 className="ml-4 text-twitter hover:text-twitter-dark transition-colors"
               >
-                <Twitter className="h-5 w-5" />
+                <TwitterIcon className="h-5 w-5 fill-current" />
               </a>
             </div>
           </div>
