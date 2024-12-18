@@ -44,9 +44,9 @@ const Reviews = () => {
       <div className="container mx-auto px-4 py-20">
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center text-gold hover:text-gold-light transition-colors mb-8"
+          className="inline-flex items-center px-6 py-3 bg-navy-light/80 backdrop-blur-sm text-gold hover:text-gold-light hover:bg-navy-light transition-all duration-300 rounded-lg shadow-lg mb-8 group"
         >
-          <ArrowLeft className="mr-2 h-5 w-5" />
+          <ArrowLeft className="mr-2 h-5 w-5 group-hover:-translate-x-1 transition-transform" />
           戻る
         </button>
 
