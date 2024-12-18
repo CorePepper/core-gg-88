@@ -34,7 +34,9 @@ const Features = () => {
         </h2>
         
         <div className="text-center mb-12">
-          <h3 className="text-2xl text-gold font-semibold mb-4">Core指サックプレミアム</h3>
+          <h3 className="text-3xl md:text-4xl text-gold font-bold mb-4 animate-glow drop-shadow-lg">
+            Core指サックプレミアム
+          </h3>
           <p className="text-white/80">
             日本一位のプロチームが開発した最高品質のゲーミングフィンガーサック
           </p>
