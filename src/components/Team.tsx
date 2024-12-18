@@ -26,7 +26,7 @@ const Team = () => {
         </h2>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-navy-light/80 backdrop-blur-sm p-8 rounded-lg mb-8">
+          <div className="bg-[rgba(15,23,42,0.7)] backdrop-blur-sm p-8 rounded-lg mb-8">
             <h3 className="text-2xl font-semibold text-gold mb-4 flex items-center">
               <Trophy className="mr-2" /> 主な実績
             </h3>
