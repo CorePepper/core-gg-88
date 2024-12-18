@@ -46,7 +46,7 @@ const Navigation = () => {
           <div className="text-gold text-xl font-bold">CORE</div>
           
           {/* タブメニュー */}
-          <div className="flex justify-center flex-1">
+          <div className="flex justify-end flex-1">
             <div className="flex space-x-8">
               {tabs.map((tab) => (
                 <button
