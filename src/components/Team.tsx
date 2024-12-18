@@ -40,8 +40,8 @@ const Team = () => {
                 </ul>
               </div>
               <img
-                src="/lovable-uploads/グループ 1.png"
-                alt="Team achievements"
+                src="/lovable-uploads/45af26eb-fd78-4d95-bbea-58374d6d568e.png"
+                alt="Team logo"
                 className="w-64 h-auto ml-8 object-contain"
               />
             </div>
