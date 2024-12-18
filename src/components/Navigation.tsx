@@ -73,9 +73,9 @@ const Navigation = () => {
                 href="https://x.com/Core_official__"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-4 text-white hover:text-gold transition-colors"
+                className="ml-4 text-twitter hover:text-twitter-dark transition-colors"
               >
-                <Twitter className="h-6 w-6" />
+                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>

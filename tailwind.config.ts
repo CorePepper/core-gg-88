@@ -32,6 +32,10 @@ export default {
           DEFAULT: "#FFD700",
           light: "#FFE44D",
         },
+        twitter: {
+          DEFAULT: "#1DA1F2",
+          dark: "#1A91DA",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
