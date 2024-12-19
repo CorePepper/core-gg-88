@@ -61,10 +61,10 @@ const Reviews = () => {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 flex flex-col"
+                className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
               >
                 {index === 0 ? (
-                  <div className="flex flex-col gap-4">
+                  <div className="flex flex-row gap-4 items-start">
                     <div className="flex-1">
                       <div className="flex items-center mb-4">
                         {[...Array(review.rating)].map((_, i) => (
@@ -78,7 +78,7 @@ const Reviews = () => {
                       <p className="text-gold font-semibold text-xl">{review.name}</p>
                     </div>
                     {review.secondImage && (
-                      <div className="w-full">
+                      <div className="w-1/3 flex-shrink-0">
                         <img
                           src={review.secondImage}
                           alt="Additional review image"
