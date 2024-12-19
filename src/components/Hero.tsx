@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-8 sm:mb-12 leading-relaxed">
             <span className="block md:inline">ゲームプレイヤーのための</span>
-            <span className="block md:inline md:ml-1">最高品質を追求する企業</span>
+            <span className="block md:inline md:ml-1">最高品質を追求する</span>
           </p>
           <button
             onClick={scrollToContact}
