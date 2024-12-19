@@ -10,12 +10,30 @@ const features = [
   {
     icon: ThumbsUp,
     title: "Amazonベストセラー獲得",
-    description: "ユーザーレビューで高評価を獲得し続けています",
+    description: (
+      <>
+        ユーザーレビューで高評価を
+        <br />
+        獲得し続けています
+      </>
+    ),
   },
   {
     icon: Zap,
-    title: "耐久性・快適さ・最速反応を実現",
-    description: "特殊素材による最速のタッチ反応と完璧なフィット感を実現",
+    title: (
+      <>
+        耐久性・快適さ
+        <br />
+        最速反応を実現
+      </>
+    ),
+    description: (
+      <>
+        特殊素材による最速のタッチ反応と
+        <br />
+        完璧なフィット感
+      </>
+    ),
   },
 ];
 
