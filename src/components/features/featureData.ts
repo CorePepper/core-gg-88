@@ -10,7 +10,7 @@ interface Feature {
 export const features: Feature[] = [
   {
     icon: Star,
-    title: ["累計10万個突破の信頼品質"],
+    title: ["累計30万個突破の信頼品質"],
     description: [
       "多くのプレイヤーに選ばれ",
       "続ける実績が証明する品質"
