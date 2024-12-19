@@ -54,35 +54,36 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-navy/90 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center">
+          {/* Logo and Text Container */}
+          <div className="flex items-center space-x-4">
             <img 
               src="/lovable-uploads/8a96f1e6-ff15-4a15-994a-e0237be603a3.png" 
               alt="Core Logo" 
-              className="h-14 w-auto mr-3 object-contain"
+              className="h-14 w-auto object-contain"
               loading="lazy"
               decoding="async"
             />
-            <div className="flex items-center">
-              <span className="text-gold text-2xl md:text-3xl font-extrabold mr-2">CORE</span>
+            <div className="flex items-center space-x-2">
+              <span className="text-gold text-2xl md:text-3xl font-extrabold">CORE</span>
               <span className="text-white text-2xl md:text-3xl font-extrabold">E-Sports</span>
             </div>
           </div>
           
-          {/* Twitter and Hamburger Menu Icons */}
-          <div className="flex items-center gap-6">
+          {/* Twitter and Hamburger Menu Icons Container */}
+          <div className="flex items-center space-x-6 md:space-x-8">
             <a
               href="https://x.com/Core_official__"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-twitter hover:text-twitter-dark transition-colors"
+              className="text-twitter hover:text-twitter-dark transition-colors p-2"
             >
               <TwitterIcon className="h-8 w-8 fill-current" />
             </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-gold transition-colors"
+              className="text-white hover:text-gold transition-colors p-2"
               aria-label="Toggle menu"
             >
               <Menu className="h-8 w-8" />
