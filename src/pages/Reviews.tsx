@@ -15,14 +15,14 @@ const reviews = [
     text: "長時間のプレイでも指先が快適で、パフォーマンスを最大限に発揮できます。プロ仕様の品質だと実感しています。",
   },
   {
-    name: "ストリーマーC",
-    rating: 5,
-    text: "配信中も快適に使用でき、視聴者からも好評です。耐久性も抜群で、長期間安心して使えます。",
-  },
-  {
     name: "プロゲーマーD",
     rating: 5,
     text: "他の製品と比較しても、反応速度と操作性が群を抜いています。チーム全体でCore製品を採用しています。",
+  },
+  {
+    name: "ストリーマーC",
+    rating: 5,
+    text: "配信中も快適に使用でき、視聴者からも好評です。耐久性も抜群で、長期間安心して使えます。",
   },
   {
     name: "eスポーツ選手E",
@@ -57,7 +57,7 @@ const Reviews = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-          {reviews.map((review, index) => (
+          {reviews.slice(0, 3).map((review, index) => (
             <div
               key={index}
               className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
@@ -83,23 +83,50 @@ const Reviews = () => {
               </div>
             </div>
           ))}
-        </div>
 
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-end gap-8 mt-12">
-          <a
-            href="https://amzn.asia/d/ghIgPyc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
-          >
-            Amazonで購入する
-            <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
-          </a>
-          <img
-            src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
-            alt="Delta Gaming Premium"
-            className="w-full md:w-[400px] h-auto rounded-lg shadow-xl"
-          />
+          <div className="col-span-1 md:col-span-2 lg:col-span-3">
+            <img
+              src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
+              alt="Delta Gaming Premium"
+              className="w-full h-auto rounded-lg shadow-xl mb-8"
+            />
+            <a
+              href="https://amzn.asia/d/ghIgPyc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
+            >
+              Amazonで購入する
+              <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+
+          {reviews.slice(3).map((review, index) => (
+            <div
+              key={index + 3}
+              className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
+            >
+              <div className="flex items-center mb-4">
+                {[...Array(review.rating)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-5 h-5 text-gold fill-current"
+                  />
+                ))}
+              </div>
+              <p className="text-white/80 mb-4">{review.text}</p>
+              <div className="flex items-center space-x-3">
+                {review.image && (
+                  <img 
+                    src={review.image} 
+                    alt={review.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                )}
+                <p className="text-gold font-semibold">{review.name}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
