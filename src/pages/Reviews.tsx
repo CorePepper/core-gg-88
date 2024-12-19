@@ -7,7 +7,6 @@ const reviews = [
     name: "わずぼーん",
     rating: 5,
     text: "タッチ感度が上がって正確なプレイができる。耐久性も凄くて気に入ってる！",
-    image: "/lovable-uploads/b51b23fd-2137-4b82-9ac0-f59bfb8c531d.png",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
@@ -76,16 +75,7 @@ const Reviews = () => {
                         ))}
                       </div>
                       <p className="text-white/80 mb-4">{review.text}</p>
-                      <div className="flex items-center space-x-3">
-                        {review.image && (
-                          <img 
-                            src={review.image} 
-                            alt={review.name}
-                            className="w-10 h-10 rounded-full object-cover"
-                          />
-                        )}
-                        <p className="text-gold font-semibold">{review.name}</p>
-                      </div>
+                      <p className="text-gold font-semibold text-xl">{review.name}</p>
                     </div>
                     {review.secondImage && (
                       <div className="w-full md:w-1/3">
@@ -108,16 +98,7 @@ const Reviews = () => {
                       ))}
                     </div>
                     <p className="text-white/80 mb-4">{review.text}</p>
-                    <div className="flex items-center space-x-3">
-                      {review.image && (
-                        <img 
-                          src={review.image} 
-                          alt={review.name}
-                          className="w-10 h-10 rounded-full object-cover"
-                        />
-                      )}
-                      <p className="text-gold font-semibold">{review.name}</p>
-                    </div>
+                    <p className="text-gold font-semibold">{review.name}</p>
                   </>
                 )}
               </div>
