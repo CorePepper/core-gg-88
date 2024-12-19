@@ -10,9 +10,14 @@ const FeatureHeader = ({ title, subtitle }: FeatureHeaderProps) => {
         {title}
       </h3>
       <p className="text-base sm:text-lg md:text-xl text-white/80 px-4">
-        <span className="block md:inline">{subtitle.split(" ").slice(0, 4).join(" ")}</span>
-        <span className="block md:inline md:ml-2">
-          {subtitle.split(" ").slice(4).join(" ")}
+        {/* Desktop view - single line */}
+        <span className="hidden md:block">
+          {subtitle}
+        </span>
+        {/* Mobile view - two lines */}
+        <span className="block md:hidden">
+          <span className="block">日本一位のチームが開発した</span>
+          <span className="block mt-1">最高品質のゲーミング指サック</span>
         </span>
       </p>
     </div>
