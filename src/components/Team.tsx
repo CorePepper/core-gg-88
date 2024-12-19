@@ -41,13 +41,17 @@ const Team = () => {
                   ))}
                 </ul>
               </div>
-              <div className="w-full md:w-64 flex justify-center">
-                <img
-                  src="/lovable-uploads/45af26eb-fd78-4d95-bbea-58374d6d568e.png"
-                  alt="Team logo"
-                  className="w-full max-w-[200px] md:max-w-[256px] h-auto object-contain"
-                />
-              </div>
+
+<div className="w-full md:w-64 flex justify-center">
+  <img
+    src="/lovable-uploads/45af26eb-fd78-4d95-bbea-58374d6d568e.png"
+    alt="Team logo"
+    className="w-full max-w-[200px] md:max-w-[256px] h-auto object-contain"
+    loading="lazy"
+    decoding="async"
+  />
+</div>
+
             </div>
           </div>
 

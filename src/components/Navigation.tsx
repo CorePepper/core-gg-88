@@ -61,6 +61,8 @@ const Navigation = () => {
               src="/lovable-uploads/8a96f1e6-ff15-4a15-994a-e0237be603a3.png" 
               alt="Core Logo" 
               className="h-10 w-auto mr-2 object-contain"
+              loading="lazy"
+              decoding="async"
             />
             <div className="text-gold text-xl font-bold">CORE</div>
           </div>
