@@ -25,9 +25,9 @@ const Team = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-navy-light/80 backdrop-blur-sm p-8 rounded-lg mb-8">
-            <div className="flex items-start">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
               <div className="flex-1">
-                <h3 className="text-2xl font-semibold text-gold mb-4 flex items-center">
+                <h3 className="text-2xl font-semibold text-gold mb-4 flex items-center justify-center md:justify-start">
                   <Trophy className="mr-2" /> 主な実績
                 </h3>
                 <ul className="space-y-4">
@@ -41,11 +41,13 @@ const Team = () => {
                   ))}
                 </ul>
               </div>
-              <img
-                src="/lovable-uploads/45af26eb-fd78-4d95-bbea-58374d6d568e.png"
-                alt="Team logo"
-                className="w-64 h-auto ml-8 object-contain"
-              />
+              <div className="w-full md:w-64 flex justify-center">
+                <img
+                  src="/lovable-uploads/45af26eb-fd78-4d95-bbea-58374d6d568e.png"
+                  alt="Team logo"
+                  className="w-full max-w-[200px] md:max-w-[256px] h-auto object-contain"
+                />
+              </div>
             </div>
           </div>
 
