@@ -4,9 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 const reviews = [
   {
-    name: "プロゲーマーA",
+    name: "CorePepper",
     rating: 5,
     text: "Core指サックを使用してから、タッチ感度が格段に向上し、より正確なプレイが可能になりました。大会でも愛用しています。",
+    image: "/lovable-uploads/f4bd1fef-49d2-490c-b3c4-4f7cdeb34d50.png"
   },
   {
     name: "プロゲーマーB",
@@ -70,7 +71,16 @@ const Reviews = () => {
                 ))}
               </div>
               <p className="text-white/80 mb-4">{review.text}</p>
-              <p className="text-gold font-semibold">{review.name}</p>
+              <div className="flex items-center space-x-3">
+                {review.image && (
+                  <img 
+                    src={review.image} 
+                    alt={review.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                )}
+                <p className="text-gold font-semibold">{review.name}</p>
+              </div>
             </div>
           ))}
         </div>
