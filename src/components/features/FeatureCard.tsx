@@ -17,7 +17,7 @@ const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => {
           </span>
         ))}
       </h3>
-      <p className="text-white/80 text-base sm:text-lg">
+      <p className="text-white/80 text-sm sm:text-base lg:text-lg leading-snug">
         {description.map((line, index) => (
           <span key={index} className="block">
             {line}
