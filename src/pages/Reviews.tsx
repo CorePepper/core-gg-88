@@ -1,9 +1,13 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Star } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
-import ReviewList from "@/components/reviews/ReviewList";
-import ReviewStats from "@/components/reviews/ReviewStats";
-import { Review } from "@/types/review";
+
+interface Review {
+  name: string;
+  rating: number;
+  text: string;
+  secondImage?: string;
+}
 
 const reviews: Review[] = [
   {
@@ -43,6 +47,69 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   }
 ];
+
+const ReviewItem = ({ review }: { review: Review }) => {
+  return (
+    <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+      <div className="flex flex-col sm:flex-row gap-4 items-start">
+        <div className="flex-1">
+          <div className="flex flex-row items-center justify-between mb-4">
+            <div className="flex">
+              {[...Array(review.rating)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-5 h-5 text-gold fill-current"
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-row items-start justify-between">
+            <div>
+              <p className="text-white/80 mb-4">{review.text}</p>
+              <p className="text-gold font-semibold text-xl">{review.name}</p>
+            </div>
+            {review.secondImage && (
+              <div className="w-1/3 ml-4 flex-shrink-0">
+                <img
+                  src={review.secondImage}
+                  alt="Additional review image"
+                  className="w-full h-auto rounded-lg object-cover"
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ReviewList = ({ reviews }: { reviews: Review[] }) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
+      {reviews.map((review, index) => (
+        <ReviewItem key={index} review={review} />
+      ))}
+    </div>
+  );
+};
+
+const ReviewStats = () => {
+  return (
+    <div className="mt-12 text-center space-y-4">
+      <div className="inline-flex items-center justify-center space-x-8">
+        <div className="text-white">
+          <span className="text-gold text-4xl font-bold block">30万個</span>
+          <span className="text-sm">累計販売数突破</span>
+        </div>
+        <div className="text-white">
+          <span className="text-gold text-4xl font-bold block">1位</span>
+          <span className="text-sm">Amazonベストセラー</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Reviews = () => {
   const navigate = useNavigate();
