@@ -4,10 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 const reviews = [
   {
-    name: "CorePepper",
+    name: "わずぼーん",
     rating: 5,
-    text: "Core指サックを使用してから、タッチ感度が格段に向上し、より正確なプレイが可能になりました。大会でも愛用しています。",
-    image: "/lovable-uploads/b51b23fd-2137-4b82-9ac0-f59bfb8c531d.png"
+    text: "タッチ感度が上がって正確なプレイができる。耐久性も凄くて気に入ってる！",
+    image: "/lovable-uploads/b51b23fd-2137-4b82-9ac0-f59bfb8c531d.png",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "プロゲーマーB",
@@ -63,25 +64,62 @@ const Reviews = () => {
                 key={index}
                 className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-gold fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-white/80 mb-4">{review.text}</p>
-                <div className="flex items-center space-x-3">
-                  {review.image && (
-                    <img 
-                      src={review.image} 
-                      alt={review.name}
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                  )}
-                  <p className="text-gold font-semibold">{review.name}</p>
-                </div>
+                {index === 0 ? (
+                  <div className="flex flex-col md:flex-row gap-4 items-start">
+                    <div className="flex-1">
+                      <div className="flex items-center mb-4">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-5 h-5 text-gold fill-current"
+                          />
+                        ))}
+                      </div>
+                      <p className="text-white/80 mb-4">{review.text}</p>
+                      <div className="flex items-center space-x-3">
+                        {review.image && (
+                          <img 
+                            src={review.image} 
+                            alt={review.name}
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
+                        )}
+                        <p className="text-gold font-semibold">{review.name}</p>
+                      </div>
+                    </div>
+                    {review.secondImage && (
+                      <div className="w-full md:w-1/3">
+                        <img
+                          src={review.secondImage}
+                          alt="Additional review image"
+                          className="w-full h-auto rounded-lg object-cover"
+                        />
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <>
+                    <div className="flex items-center mb-4">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-5 h-5 text-gold fill-current"
+                        />
+                      ))}
+                    </div>
+                    <p className="text-white/80 mb-4">{review.text}</p>
+                    <div className="flex items-center space-x-3">
+                      {review.image && (
+                        <img 
+                          src={review.image} 
+                          alt={review.name}
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                      )}
+                      <p className="text-gold font-semibold">{review.name}</p>
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
