@@ -1,8 +1,11 @@
-import { Star, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
+import ReviewList from "@/components/reviews/ReviewList";
+import ReviewStats from "@/components/reviews/ReviewStats";
+import { Review } from "@/types/review";
 
-const reviews = [
+const reviews: Review[] = [
   {
     name: "わずぼーん",
     rating: 5,
@@ -38,7 +41,7 @@ const reviews = [
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
-  },
+  }
 ];
 
 const Reviews = () => {
@@ -62,44 +65,7 @@ const Reviews = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
-            {reviews.map((review, index) => (
-              <div
-                key={index}
-                className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
-              >
-                <div className="flex flex-col sm:flex-row gap-4 items-start">
-                  <div className="flex-1">
-                    <div className="flex flex-row items-center justify-between mb-4">
-                      <div className="flex">
-                        {[...Array(review.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-5 h-5 text-gold fill-current"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex flex-row items-start justify-between">
-                      <div>
-                        <p className="text-white/80 mb-4">{review.text}</p>
-                        <p className="text-gold font-semibold text-xl">{review.name}</p>
-                      </div>
-                      {review.secondImage && (
-                        <div className="w-1/3 ml-4 flex-shrink-0">
-                          <img
-                            src={review.secondImage}
-                            alt="Additional review image"
-                            className="w-full h-auto rounded-lg object-cover"
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewList reviews={reviews} />
           
           <div className="lg:w-1/3 flex flex-col items-center gap-8">
             <img
@@ -129,6 +95,8 @@ const Reviews = () => {
             </div>
           </div>
         </div>
+
+        <ReviewStats />
       </div>
     </div>
   );
