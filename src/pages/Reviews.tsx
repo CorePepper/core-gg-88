@@ -53,7 +53,7 @@ const Reviews = () => {
 
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">プロ選手の声</h1>
-          <p className="text-xl text-gold">プロのプレイヤーから寄せられた体験談</p>
+          <p className="text-xl text-gold">プロのプレイヤーから寄せられた感想</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
