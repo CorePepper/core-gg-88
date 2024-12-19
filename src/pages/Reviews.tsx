@@ -65,7 +65,7 @@ const Reviews = () => {
               >
                 <div className="flex flex-col sm:flex-row gap-4 items-start">
                   <div className="flex-1">
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex flex-row items-center justify-between mb-4">
                       <div className="flex">
                         {[...Array(review.rating)].map((_, i) => (
                           <Star
@@ -75,18 +75,22 @@ const Reviews = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-white/80 mb-4">{review.text}</p>
-                    <p className="text-gold font-semibold text-xl">{review.name}</p>
-                  </div>
-                  {review.secondImage && (
-                    <div className="w-full sm:w-1/3 flex-shrink-0">
-                      <img
-                        src={review.secondImage}
-                        alt="Additional review image"
-                        className="w-full h-auto rounded-lg object-cover"
-                      />
+                    <div className="flex flex-row items-start justify-between">
+                      <div>
+                        <p className="text-white/80 mb-4">{review.text}</p>
+                        <p className="text-gold font-semibold text-xl">{review.name}</p>
+                      </div>
+                      {review.secondImage && (
+                        <div className="w-1/3 ml-4 flex-shrink-0">
+                          <img
+                            src={review.secondImage}
+                            alt="Additional review image"
+                            className="w-full h-auto rounded-lg object-cover"
+                          />
+                        </div>
+                      )}
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             ))}
