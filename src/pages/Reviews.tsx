@@ -56,50 +56,52 @@ const Reviews = () => {
           <p className="text-xl text-gold">プロのプレイヤーから寄せられた体験談</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
+        <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
+            {reviews.map((review, index) => (
+              <div
+                key={index}
+                className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-gold fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-white/80 mb-4">{review.text}</p>
+                <div className="flex items-center space-x-3">
+                  {review.image && (
+                    <img 
+                      src={review.image} 
+                      alt={review.name}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                  )}
+                  <p className="text-gold font-semibold">{review.name}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="lg:w-1/3 flex flex-col items-center gap-8">
+            <img
+              src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
+              alt="Delta Gaming Premium"
+              className="w-full h-auto rounded-lg shadow-xl"
+            />
+            <a
+              href="https://amzn.asia/d/ghIgPyc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
             >
-              <div className="flex items-center mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 text-gold fill-current"
-                  />
-                ))}
-              </div>
-              <p className="text-white/80 mb-4">{review.text}</p>
-              <div className="flex items-center space-x-3">
-                {review.image && (
-                  <img 
-                    src={review.image} 
-                    alt={review.name}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                )}
-                <p className="text-gold font-semibold">{review.name}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-end gap-8 mt-12">
-          <a
-            href="https://amzn.asia/d/ghIgPyc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
-          >
-            Amazonで購入する
-            <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
-          </a>
-          <img
-            src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
-            alt="Delta Gaming Premium"
-            className="w-full md:w-[400px] h-auto rounded-lg shadow-xl"
-          />
+              Amazonで購入する
+              <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
