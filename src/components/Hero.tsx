@@ -10,13 +10,11 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen bg-navy relative overflow-hidden flex items-center">
-      {/* Background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/90 to-navy/80" />
         <div className="absolute inset-0 bg-[url('/lovable-uploads/5033d188-8ff7-40bd-a808-a8aecc24cdd6.png')] bg-cover bg-center opacity-30" />
       </div>
 
-      {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -25,7 +23,7 @@ const Hero = () => {
             <span className="text-white">E-Sports</span>
           </h1>
           <p className="text-2xl md:text-3xl text-gold font-light mb-4">
-            日本から世界へ、ゲームと革新を届ける
+            Pushing the Edge of Excellence, Defining Victory.
           </p>
           <p className="text-lg md:text-xl text-white/80 mb-8">
             ゲームプレイヤーのための最高品質を追求する企業
