@@ -55,45 +55,45 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-navy/90 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/8a96f1e6-ff15-4a15-994a-e0237be603a3.png" 
               alt="Core Logo" 
-              className="h-10 w-auto mr-2 object-contain"
+              className="h-14 w-auto mr-3 object-contain"
               loading="lazy"
               decoding="async"
             />
             <div className="flex items-center">
-              <span className="text-gold text-xl font-bold mr-2">CORE</span>
-              <span className="text-white text-xl font-bold">E-Sports</span>
+              <span className="text-gold text-2xl md:text-3xl font-extrabold mr-2">CORE</span>
+              <span className="text-white text-2xl md:text-3xl font-extrabold">E-Sports</span>
             </div>
           </div>
           
           {/* Twitter and Hamburger Menu Icons */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <a
               href="https://x.com/Core_official__"
               target="_blank"
               rel="noopener noreferrer"
               className="text-twitter hover:text-twitter-dark transition-colors"
             >
-              <TwitterIcon className="h-5 w-5 fill-current" />
+              <TwitterIcon className="h-8 w-8 fill-current" />
             </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-gold transition-colors"
               aria-label="Toggle menu"
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-8 w-8" />
             </button>
           </div>
 
           {/* Mobile Menu Overlay */}
           {isMenuOpen && (
-            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" style={{ top: '64px' }}>
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" style={{ top: '80px' }}>
               <div 
-                className={`fixed right-0 top-16 h-[calc(100vh-64px)] w-full max-w-sm bg-[#FFFBEA] shadow-lg transform transition-transform duration-300 ease-in-out ${
+                className={`fixed right-0 top-20 h-[calc(100vh-80px)] w-full max-w-sm bg-[#FFFBEA] shadow-lg transform transition-transform duration-300 ease-in-out ${
                   isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
               >
@@ -102,7 +102,7 @@ const Navigation = () => {
                     <button
                       key={tab.id}
                       onClick={() => scrollToSection(tab.id)}
-                      className={`px-6 py-3 text-2xl font-bold w-full text-center transition-colors border-b-2 border-black/20 ${
+                      className={`px-6 py-3 text-2xl font-extrabold w-full text-center transition-colors border-b-2 border-black/20 ${
                         activeTab === tab.id 
                           ? 'text-[#D4AF37]' 
                           : 'text-[#1A202C] hover:text-[#D4AF37]'
