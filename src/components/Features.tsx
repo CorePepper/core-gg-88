@@ -5,7 +5,13 @@ const features = [
   {
     icon: Star,
     title: "累計10万個突破の信頼品質",
-    description: "多くのプレイヤーに選ばれ続ける実績が証明する品質",
+    description: (
+      <>
+        多くのプレイヤーに選ばれ
+        <br />
+        続ける実績が証明する品質
+      </>
+    ),
   },
   {
     icon: ThumbsUp,
