@@ -22,7 +22,7 @@ const Hero = () => {
             <span className="mx-2"></span>
             <span className="text-white">E-Sports</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-gold font-light mb-4">
+          <p className="text-4xl md:text-5xl text-gold font-light mb-4 drop-shadow-lg animate-fade-in">
             Pushing the Edge of Excellence, Defining Victory.
           </p>
           <p className="text-lg md:text-xl text-white/80 mb-8">
