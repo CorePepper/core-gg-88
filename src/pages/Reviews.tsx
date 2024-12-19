@@ -7,7 +7,7 @@ const reviews = [
     name: "CorePepper",
     rating: 5,
     text: "Core指サックを使用してから、タッチ感度が格段に向上し、より正確なプレイが可能になりました。大会でも愛用しています。",
-    image: "/lovable-uploads/f4bd1fef-49d2-490c-b3c4-4f7cdeb34d50.png"
+    image: "/lovable-uploads/b51b23fd-2137-4b82-9ac0-f59bfb8c531d.png"
   },
   {
     name: "プロゲーマーB",
