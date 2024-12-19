@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-navy relative overflow-hidden flex items-center">
+    <section className="h-[calc(100vh-80px)] bg-navy relative overflow-hidden flex items-center">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/90 to-navy/80" />
         <div className="absolute inset-0 bg-[url('/lovable-uploads/5033d188-8ff7-40bd-a808-a8aecc24cdd6.png')] bg-cover bg-center opacity-30" />
