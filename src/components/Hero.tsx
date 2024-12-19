@@ -17,19 +17,19 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl text-gold font-extrabold mb-6 drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-gold font-extrabold mb-4 sm:mb-6 leading-tight">
             <span className="block">Pushing the Edge of Excellence,</span>
             <span className="block mt-2">Defining Victory.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 mb-12 px-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-8 sm:mb-12 leading-relaxed">
             ゲームプレイヤーのための最高品質を追求する企業
           </p>
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center px-8 py-4 text-lg bg-gold text-navy font-bold rounded-full hover:bg-gold-light transition-colors group"
+            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg bg-gold text-navy font-bold rounded-full hover:bg-gold-light transition-colors group"
           >
             お問い合わせはこちら
-            <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </div>
