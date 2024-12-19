@@ -1,6 +1,13 @@
 import { Star, ThumbsUp, Zap } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
-export const features = [
+interface Feature {
+  icon: LucideIcon;
+  title: React.ReactNode;
+  description: React.ReactNode;
+}
+
+export const features: Feature[] = [
   {
     icon: Star,
     title: "累計10万個突破の信頼品質",
