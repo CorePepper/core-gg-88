@@ -84,22 +84,6 @@ const Reviews = () => {
             </div>
           ))}
         </div>
-
-        <div className="w-full max-w-[2000px] mx-auto mb-8">
-          <img
-            src="/lovable-uploads/4dde4f94-0ed8-4e92-a43e-79aae1245a86.png"
-            alt="Delta Gaming Premium"
-            className="w-full h-[400px] object-cover rounded-lg shadow-xl"
-          />
-        </div>
-
-        <div className="w-full max-w-[2000px] mx-auto">
-          <img
-            src="/lovable-uploads/2912a528-9194-4836-a562-117852dd865c.png"
-            alt="Core Gaming Experience"
-            className="w-full h-auto rounded-lg shadow-xl"
-          />
-        </div>
       </div>
     </div>
   );
