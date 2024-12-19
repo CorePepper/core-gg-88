@@ -38,7 +38,8 @@ const Features = () => {
             Core指サックプレミアム
           </h3>
           <p className="text-white/80">
-            日本一位のプロチームが開発した最高品質のゲーミングフィンガーサック
+            <span className="block md:inline">日本一位のチームが開発した</span>
+            <span className="block md:inline">最高品質のゲーミング指サック</span>
           </p>
         </div>
 
