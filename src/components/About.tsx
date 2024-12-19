@@ -10,7 +10,7 @@ const About = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span className="text-white">CORE E-Sports について</span>
+          <span><span className="text-gold">CORE</span><span className="text-white"> E-Sports について</span></span>
         </h2>
 
         <div className="max-w-3xl mx-auto text-center">
