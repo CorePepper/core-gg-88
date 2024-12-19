@@ -84,6 +84,23 @@ const Reviews = () => {
             </div>
           ))}
         </div>
+
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-end gap-8 mt-12">
+          <a
+            href="https://amzn.asia/d/ghIgPyc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
+          >
+            Amazonで購入する
+            <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <img
+            src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
+            alt="Delta Gaming Premium"
+            className="w-full md:w-[400px] h-auto rounded-lg shadow-xl"
+          />
+        </div>
       </div>
     </div>
   );
