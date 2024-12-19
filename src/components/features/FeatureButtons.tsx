@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const FeatureButtons = () => {
   return (
-    <div className="text-center mt-12 sm:mt-16 space-y-4 sm:space-y-6">
+    <div className="text-center mt-12 sm:mt-16 flex flex-col items-center gap-4 sm:gap-6">
       <a
         href="https://amzn.asia/d/ghIgPyc"
         target="_blank"
