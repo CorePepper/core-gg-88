@@ -13,26 +13,31 @@ const reviews = [
     name: "プロゲーマーB",
     rating: 5,
     text: "長時間のプレイでも指先が快適で、パフォーマンスを最大限に発揮できます。プロ仕様の品質だと実感しています。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "ストリーマーC",
     rating: 5,
     text: "配信中も快適に使用でき、視聴者からも好評です。耐久性も抜群で、長期間安心して使えます。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "プロゲーマーD",
     rating: 5,
     text: "他の製品と比較しても、反応速度と操作性が群を抜いています。チーム全体でCore製品を採用しています。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "eスポーツ選手E",
     rating: 5,
     text: "国際大会での使用実績もあり、信頼性は折り紙付きです。プロの要求に応える最高峰の製品です。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
     name: "プロゲーマーF",
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
 ];
 
