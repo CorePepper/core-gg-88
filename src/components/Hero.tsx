@@ -17,11 +17,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-gold">CORE</span>
-            <span className="mx-2"></span>
-            <span className="text-white">E-Sports</span>
-          </h1>
           <p className="text-4xl md:text-5xl text-gold font-light mb-4 drop-shadow-lg animate-fade-in">
             Pushing the Edge of Excellence, Defining Victory.
           </p>
