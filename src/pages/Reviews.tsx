@@ -65,13 +65,15 @@ const Reviews = () => {
               >
                 <div className="flex flex-col sm:flex-row gap-4 items-start">
                   <div className="flex-1">
-                    <div className="flex items-center mb-4">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-5 h-5 text-gold fill-current"
-                        />
-                      ))}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-5 h-5 text-gold fill-current"
+                          />
+                        ))}
+                      </div>
                     </div>
                     <p className="text-white/80 mb-4">{review.text}</p>
                     <p className="text-gold font-semibold text-xl">{review.name}</p>
