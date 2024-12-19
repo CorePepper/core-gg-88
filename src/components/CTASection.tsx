@@ -10,7 +10,8 @@ const CTASection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
-            今すぐプロのフィーリングを体感しよう
+            <span className="block md:inline">今すぐプロのフィーリングを</span>
+            <span className="block md:inline">体感しよう</span>
           </h2>
           
           <a

@@ -29,8 +29,8 @@ const Reviews = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span className="text-white">多くのプレイヤーが認めた</span>
-          <span className="text-gold">クオリティ</span>
+          <span className="block md:inline text-white">多くのプレイヤーが認めた</span>
+          <span className="block md:inline text-gold">クオリティ</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
