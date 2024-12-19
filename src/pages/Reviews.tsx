@@ -108,7 +108,7 @@ const Reviews = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 bg-twitter text-white font-semibold rounded-full hover:bg-twitter-dark transition-colors group"
               >
-                #Core_指サック を検索
+                購入者の声 を検索
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
