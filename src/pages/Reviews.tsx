@@ -57,14 +57,14 @@ const Reviews = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:w-2/3">
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full"
               >
                 {index === 0 ? (
-                  <div className="flex flex-col md:flex-row gap-4 items-start">
+                  <div className="flex flex-col sm:flex-row gap-4 items-start h-full">
                     <div className="flex-1">
                       <div className="flex items-center mb-4">
                         {[...Array(review.rating)].map((_, i) => (
@@ -78,7 +78,7 @@ const Reviews = () => {
                       <p className="text-gold font-semibold text-xl">{review.name}</p>
                     </div>
                     {review.secondImage && (
-                      <div className="w-full md:w-1/3">
+                      <div className="w-full sm:w-1/3">
                         <img
                           src={review.secondImage}
                           alt="Additional review image"
