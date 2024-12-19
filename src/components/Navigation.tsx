@@ -64,7 +64,10 @@ const Navigation = () => {
               loading="lazy"
               decoding="async"
             />
-            <div className="text-gold text-xl font-bold">CORE</div>
+            <div className="flex items-center">
+              <span className="text-gold text-xl font-bold mr-2">CORE</span>
+              <span className="text-white text-xl font-bold">E-Sports</span>
+            </div>
           </div>
           
           {/* Twitter and Hamburger Menu Icons */}
