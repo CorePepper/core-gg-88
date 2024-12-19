@@ -92,15 +92,26 @@ const Reviews = () => {
               alt="Delta Gaming Premium"
               className="w-full h-auto rounded-lg shadow-xl"
             />
-            <a
-              href="https://amzn.asia/d/ghIgPyc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
-            >
-              Amazonで購入する
-              <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <div className="flex flex-col gap-4 w-full">
+              <a
+                href="https://amzn.asia/d/ghIgPyc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-colors group"
+              >
+                Amazonで購入する
+                <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="https://twitter.com/hashtag/Core_指サック"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 bg-twitter text-white font-semibold rounded-full hover:bg-twitter-dark transition-colors group"
+              >
+                #Core_指サック を検索
+                <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
