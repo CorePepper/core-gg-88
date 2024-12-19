@@ -17,10 +17,10 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-5xl md:text-6xl text-gold font-extrabold mb-4 drop-shadow-lg animate-fade-in leading-tight">
-            <span className="block mb-2">Pushing the Edge of Excellence,</span>
-            <span className="block">Defining Victory.</span>
-          </div>
+          <h1 className="text-5xl md:text-6xl text-gold font-extrabold mb-4 drop-shadow-lg animate-fade-in flex flex-col leading-none">
+            <span className="inline-block mb-2">Pushing the Edge of Excellence,</span>
+            <span className="inline-block">Defining Victory.</span>
+          </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8">
             ゲームプレイヤーのための最高品質を追求する企業
           </p>
