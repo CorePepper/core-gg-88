@@ -9,7 +9,12 @@ const NetlifyDeployInstructions = () => {
           <strong>重要: プロジェクトのエクスポートについて</strong>
           <ul className="list-disc pl-4 mt-1">
             <li>画面右上の「Edit code」ボタンをクリック</li>
-            <li>表示されるメニューから「Clone」を選択し、HTTPSまたはSSHのURLをコピー</li>
+            <li>表示されるメニューから「Clone」を選択し、以下のいずれかのURLをコピー：
+              <ul className="list-disc pl-4 mt-1">
+                <li>HTTPS: https://github.com/CorePepper/core-gg.git</li>
+                <li>SSH: git@github.com:CorePepper/core-gg.git</li>
+              </ul>
+            </li>
             <li>または「View on GitHub」からGitHubで直接ファイルを確認することもできます</li>
           </ul>
         </li>
