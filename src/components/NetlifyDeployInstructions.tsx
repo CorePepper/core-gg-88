@@ -2,80 +2,108 @@ import React from "react";
 
 const NetlifyDeployInstructions = () => {
   return (
-    <div className="space-y-2 max-w-full overflow-x-hidden">
-      <p className="font-semibold">1. プロジェクトのクローンとセットアップ</p>
-      <ul className="list-disc pl-4 space-y-1">
-        <li>
-          <strong>Step 1: GitHubリポジトリのクローン</strong>
-          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
-            <code>git clone https://github.com/CorePepper/core-gg.git</code>
-          </div>
-        </li>
-        <li>
-          <strong>Step 2: プロジェクトフォルダへ移動</strong>
-          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
-            <code>cd core-gg</code>
-          </div>
-        </li>
-      </ul>
+    <div className="space-y-4 max-w-full overflow-x-hidden p-4">
+      <h2 className="text-xl font-bold mb-4">Netlifyデプロイの手順書</h2>
 
-      <p className="font-semibold mt-4">2. 必要なコマンドを順番に実行</p>
-      <ul className="list-disc pl-4 space-y-1">
-        <li>
-          <strong>Git初期化とリモート設定：</strong>
-          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto whitespace-pre-wrap break-all">
-            <code>git init</code>
-          </div>
-        </li>
-        <li>
-          <strong>リモートリポジトリの追加：</strong>
-          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto whitespace-pre-wrap break-all">
-            <code>git remote add origin https://github.com/CorePepper/core-gg.git</code>
-          </div>
-        </li>
-        <li>
-          <strong>ファイルの追加：</strong>
-          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
-            <code>git add .</code>
-          </div>
-        </li>
-        <li>
-          <strong>コミット：</strong>
-          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
-            <code>git commit -m "最初のアップロード"</code>
-          </div>
-        </li>
-        <li>
-          <strong>プッシュ：</strong>
-          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
-            <code>git push origin main</code>
-          </div>
-        </li>
-      </ul>
-
-      <p className="font-semibold mt-4">3. Netlifyでの設定</p>
-      <ul className="list-disc pl-4 space-y-1">
-        <li>チーム選択: "CORE" を選択</li>
-        <li>サイト名: お好きな名前を入力
-          <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
-            <li>例: my-core-project （.netlify.app が自動的に追加されます）</li>
-            <li>空欄の場合は自動生成されます</li>
+      <div className="space-y-6">
+        {/* セクション1: 準備 */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-3">準備するもの</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>GitHubアカウント</li>
+            <li>Netlifyアカウント</li>
+            <li>ローカルPCにGitがインストールされていること</li>
           </ul>
-        </li>
-      </ul>
+        </div>
 
-      <p className="font-semibold mt-4">4. ビルド設定</p>
-      <ul className="list-disc pl-4 space-y-1">
-        <li>ベースディレクトリ: 空欄のまま</li>
-        <li>ビルドコマンド: npm run build</li>
-        <li>公開ディレクトリ: dist</li>
-      </ul>
+        {/* セクション2: GitHubでの作業 */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-3">Step 1: GitHubでの作業</h3>
+          <div className="space-y-2">
+            <p>1. GitHubにログインする</p>
+            <p>2. 新しいリポジトリを作成する</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>リポジトリ名: 好きな名前（例：my-core-project）</li>
+              <li>公開設定: Public</li>
+              <li>その他の設定はデフォルトのまま</li>
+            </ul>
+          </div>
+        </div>
 
-      <p className="font-semibold mt-4">5. デプロイの開始</p>
-      <ul className="list-disc pl-4 space-y-1">
-        <li>「Deploy site」をクリックしてデプロイを開始</li>
-        <li>デプロイ状況はダッシュボードで確認できます</li>
-      </ul>
+        {/* セクション3: ローカルでの作業 */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-3">Step 2: ローカルPCでの作業</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-medium mb-2">1. プロジェクトをダウンロード:</p>
+              <div className="bg-gray-100 p-3 rounded">
+                <code>git clone https://github.com/CorePepper/core-gg.git</code>
+              </div>
+            </div>
+            
+            <div>
+              <p className="font-medium mb-2">2. フォルダに移動:</p>
+              <div className="bg-gray-100 p-3 rounded">
+                <code>cd core-gg</code>
+              </div>
+            </div>
+
+            <div>
+              <p className="font-medium mb-2">3. Gitの初期化と設定:</p>
+              <div className="space-y-2">
+                <div className="bg-gray-100 p-3 rounded">
+                  <code>git init</code>
+                </div>
+                <div className="bg-gray-100 p-3 rounded">
+                  <code>git add .</code>
+                </div>
+                <div className="bg-gray-100 p-3 rounded">
+                  <code>git commit -m "初回コミット"</code>
+                </div>
+                <div className="bg-gray-100 p-3 rounded">
+                  <code>git branch -M main</code>
+                </div>
+                <div className="bg-gray-100 p-3 rounded">
+                  <code>git remote add origin [あなたのGitHubリポジトリのURL]</code>
+                </div>
+                <div className="bg-gray-100 p-3 rounded">
+                  <code>git push -u origin main</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* セクション4: Netlifyでの作業 */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-3">Step 3: Netlifyでの作業</h3>
+          <div className="space-y-2">
+            <p>1. Netlifyにログインする</p>
+            <p>2. 「Add new site」→「Import an existing project」を選択</p>
+            <p>3. 「Deploy with GitHub」を選択</p>
+            <p>4. 先ほど作成したGitHubリポジトリを選択</p>
+            <p className="font-medium mt-4">5. デプロイ設定:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Team: "CORE" を選択</li>
+              <li>Branch to deploy: main</li>
+              <li>Base directory: 空欄のまま</li>
+              <li>Build command: npm run build</li>
+              <li>Publish directory: dist</li>
+            </ul>
+            <p>6. 「Deploy site」ボタンをクリック</p>
+          </div>
+        </div>
+
+        {/* セクション5: 確認 */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold mb-3">デプロイ後の確認</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>デプロイが完了すると、自動的にURLが生成されます</li>
+            <li>生成されたURLにアクセスして、サイトが正しく表示されることを確認してください</li>
+            <li>エラーが発生した場合は、Netlifyのデプロイログを確認してください</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
