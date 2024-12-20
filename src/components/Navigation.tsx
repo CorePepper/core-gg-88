@@ -57,8 +57,8 @@ const Navigation = () => {
     console.log('Showing GitHub export guidance toast with URL instructions');
     toast({
       title: "GitHubへのエクスポート手順",
-      description: "1. GitHubアカウントとの連携画面が表示されます\n2. 「Authorize」をクリックしてGitHubと連携\n3. リポジトリ名を入力（例：core-esports）\n4. 「Create repository」をクリック\n5. エクスポート完了後、画面上部に緑色の通知バーが表示され、その中にGitHubリポジトリのURLが含まれています\n\n※ URLをクリックすると、作成されたGitHubリポジトリのページが開きます\n※ この通知バーは一時的なものなので、URLは必要に応じてコピーしておくことをお勧めします",
-      duration: 20000,
+      description: "1. GitHubアカウントとの連携画面が表示されます\n2. 「Authorize」をクリックしてGitHubと連携\n3. リポジトリ名を入力（例：core-esports）\n4. 「Create repository」をクリック\n5. エクスポート完了後、画面上部に緑色の通知バーが表示され、その中にGitHubリポジトリのURLが含まれています\n\n【URLの確認方法】\n・画面上部に表示される緑色の通知バーを探してください\n・通知バーの中にあるURLをクリックすると、GitHubリポジトリが開きます\n・この通知バーは一時的に表示されるので、必要な場合はURLをコピーしてください\n\n※ 通知バーが見つからない場合は、画面上部をよく確認してください",
+      duration: 25000,
     });
   };
 
