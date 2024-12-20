@@ -52,6 +52,12 @@ const Navigation = () => {
     { id: "contact", label: "Contact" }
   ];
 
+  const handleShare = () => {
+    // Lovableのシェア機能を使用するためのメッセージ
+    console.log('Lovableのシェア機能を使用してください。画面右上の「Publish」ボタンからGitHubにエクスポートできます。');
+    alert('Lovableのシェア機能を使用してください。画面右上の「Publish」ボタンからGitHubにエクスポートできます。');
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-navy/90 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +88,7 @@ const Navigation = () => {
               <TwitterIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 fill-current" />
             </a>
             <button
-              onClick={() => window.location.href = 'https://github.com/new'}
+              onClick={handleShare}
               className="text-white hover:text-gold transition-colors p-1.5 sm:p-2"
               aria-label="Share project"
             >
