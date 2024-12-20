@@ -3,66 +3,57 @@ import React from "react";
 const NetlifyDeployInstructions = () => {
   return (
     <div className="space-y-2 max-w-full overflow-x-hidden">
-      <p className="font-semibold">1. プロジェクトのフォルダを見つける</p>
+      <p className="font-semibold">1. プロジェクトのクローンとセットアップ</p>
       <ul className="list-disc pl-4 space-y-1">
         <li>
-          <strong>重要: プロジェクトのエクスポートについて</strong>
-          <ul className="list-disc pl-4 mt-1">
-            <li>画面右上の「Edit code」ボタンをクリック</li>
-            <li>表示されるメニューから「Clone」を選択し、以下のいずれかのURLをコピー：
-              <ul className="list-disc pl-4 mt-1 break-all">
-                <li>HTTPS: https://github.com/CorePepper/core-gg.git</li>
-                <li>SSH: git@github.com:CorePepper/core-gg.git</li>
-              </ul>
-            </li>
-            <li>または「View on GitHub」からGitHubで直接ファイルを確認することもできます</li>
-          </ul>
+          <strong>Step 1: GitHubリポジトリのクローン</strong>
+          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
+            <code>git clone https://github.com/CorePepper/core-gg.git</code>
+          </div>
+        </li>
+        <li>
+          <strong>Step 2: プロジェクトフォルダへ移動</strong>
+          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
+            <code>cd core-gg</code>
+          </div>
         </li>
       </ul>
 
-      <p className="font-semibold mt-4">2. プログラムを開いてフォルダに移動</p>
+      <p className="font-semibold mt-4">2. 必要なコマンドを順番に実行</p>
       <ul className="list-disc pl-4 space-y-1">
-        <li>Windowsの場合：スタートメニューから「コマンドプロンプト」を検索して開く</li>
-        <li>Macの場合：Spotlightで「ターミナル」を検索して開く</li>
-        <li className="break-words">下のコマンドをコピーして貼り付け、プロジェクトのフォルダの場所に変更してください：
-          <pre className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
-            cd プロジェクトのフォルダの場所
-          </pre>
+        <li>
+          <strong>Git初期化とリモート設定：</strong>
+          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto whitespace-pre-wrap break-all">
+            <code>git init</code>
+          </div>
         </li>
-        <li>例：
-          <ul className="list-disc pl-4 mt-1">
-            <li className="break-all">Windowsの場合：cd C:\Users\あなたの名前\Downloads\プロジェクト名</li>
-            <li className="break-all">Macの場合：cd /Users/あなたの名前/Downloads/プロジェクト名</li>
-          </ul>
+        <li>
+          <strong>リモートリポジトリの追加：</strong>
+          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto whitespace-pre-wrap break-all">
+            <code>git remote add origin https://github.com/CorePepper/core-gg.git</code>
+          </div>
+        </li>
+        <li>
+          <strong>ファイルの追加：</strong>
+          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
+            <code>git add .</code>
+          </div>
+        </li>
+        <li>
+          <strong>コミット：</strong>
+          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
+            <code>git commit -m "最初のアップロード"</code>
+          </div>
+        </li>
+        <li>
+          <strong>プッシュ：</strong>
+          <div className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
+            <code>git push origin main</code>
+          </div>
         </li>
       </ul>
 
-      <p className="font-semibold mt-4">3. 必要なコマンドを順番に実行</p>
-      <p className="text-sm text-gray-600 mt-1">
-        以下のコマンドを1つずつコピーして貼り付け、Enterキーを押してください：
-      </p>
-      <pre className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto whitespace-pre-wrap break-all">
-        git init
-        
-        git remote add origin あなたのGitHubリポジトリのURL
-
-        git add .
-
-        git commit -m "最初のアップロード"
-
-        git push origin main
-      </pre>
-      <p className="text-sm text-gray-600 mt-1 break-words">
-        ※GitHubリポジトリのURLは、GitHubのプロジェクトページの緑色の「Code」ボタンをクリックすると表示されます
-      </p>
-
-      <p className="font-semibold mt-4">4. Netlifyで確認</p>
-      <p className="text-sm text-gray-600 mt-1">
-        上記の手順が完了したら、Netlifyの画面を更新（リロード）してください。
-        ブランチ（main）が表示されるようになります。
-      </p>
-
-      <p className="font-semibold mt-4">5. 基本設定</p>
+      <p className="font-semibold mt-4">3. Netlifyでの設定</p>
       <ul className="list-disc pl-4 space-y-1">
         <li>チーム選択: "CORE" を選択</li>
         <li>サイト名: お好きな名前を入力
@@ -73,14 +64,14 @@ const NetlifyDeployInstructions = () => {
         </li>
       </ul>
 
-      <p className="font-semibold mt-4">6. ビルド設定</p>
+      <p className="font-semibold mt-4">4. ビルド設定</p>
       <ul className="list-disc pl-4 space-y-1">
         <li>ベースディレクトリ: 空欄のまま</li>
-        <li>ビルドコマンド: 「npm run build」</li>
-        <li>公開ディレクトリ: 「dist」</li>
+        <li>ビルドコマンド: npm run build</li>
+        <li>公開ディレクトリ: dist</li>
       </ul>
 
-      <p className="font-semibold mt-4">7. デプロイの開始</p>
+      <p className="font-semibold mt-4">5. デプロイの開始</p>
       <ul className="list-disc pl-4 space-y-1">
         <li>「Deploy site」をクリックしてデプロイを開始</li>
         <li>デプロイ状況はダッシュボードで確認できます</li>
