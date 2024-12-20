@@ -74,12 +74,15 @@ const Navigation = () => {
             alt="GitHub repository creation page" 
             className="w-full rounded-lg border border-gray-200 mb-2"
           />
-          <p>1. 「Repository name」にリポジトリ名を入力してください</p>
-          <p>2. 「Public」または「Private」を選択してください</p>
-          <p>3. 「Create repository」をクリックしてください</p>
+          <p>1. 「所有者」欄でご自身のアカウントを選択してください</p>
+          <p>2. 「リポジトリ名」欄に好きな名前を入力してください（英数字、ハイフン、アンダースコアが使用可能）</p>
+          <p>3. 「説明（オプション）」欄にプロジェクトの説明を入力できます</p>
+          <p>4. 「公開」または「プライベート」を選択してください</p>
+          <p>5. 必要に応じて「READMEファイルを追加する」にチェックを入れてください</p>
+          <p>6. 「リポジトリを作成する」ボタンをクリックして完了です</p>
         </div>
       ),
-      duration: 10000,
+      duration: 15000,
     });
     window.open('https://github.com/new', '_blank');
   };
