@@ -50,6 +50,19 @@ const Navigation = () => {
                 <li>package.jsonに定義されている標準的なビルドコマンドです</li>
               </ul>
             </li>
+            <li>Publish directory:
+              <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
+                <li>「dist」と入力してください</li>
+                <li>これはViteプロジェクトのビルド出力先フォルダです</li>
+                <li>ビルドされたファイルがここに生成されます</li>
+              </ul>
+            </li>
+            <li>Functions directory:
+              <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
+                <li>現時点では空欄のままで問題ありません</li>
+                <li>サーバーレス関数を使用する場合のみ設定が必要です</li>
+              </ul>
+            </li>
           </ul>
 
           <p className="font-semibold mt-4">3. デプロイ開始</p>
