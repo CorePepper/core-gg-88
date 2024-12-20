@@ -1,172 +1,65 @@
-import { useState, useEffect } from "react";
-import { TwitterIcon, Menu, FileEdit, ArrowUp } from "lucide-react";
+import React from "react";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "./ui/navigation-menu";
+import { Button } from "./ui/button";
+import { Github } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
-  const [activeTab, setActiveTab] = useState("products");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showGuide, setShowGuide] = useState(true);
   const { toast } = useToast();
 
-  useEffect(() => {
-    // Hide guide after 10 seconds
-    const timer = setTimeout(() => {
-      setShowGuide(false);
-    }, 10000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMenuOpen]);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActiveTab(id);
-      setIsMenuOpen(false);
-    }
+  const handleExportToGithub = () => {
+    window.open("https://github.com/new", "_blank");
   };
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1);
-      if (hash) {
-        setActiveTab(hash);
-      }
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      setActiveTab(hash);
-    }
-  }, []);
-
-  const tabs = [
-    { id: "products", label: "Product" },
-    { id: "team", label: "Team" },
-    { id: "about", label: "Company" },
-    { id: "contact", label: "Contact" }
-  ];
-
-  const handleShare = () => {
-    console.log('Opening GitHub export dialog');
+  const handleCustomDomain = () => {
     toast({
-      title: "GitHubリポジトリの作成手順",
+      title: "カスタムドメインの設定手順",
       description: (
         <div className="space-y-2">
-          <img 
-            src="/lovable-uploads/b5d7e000-c752-4203-858f-621275d36506.png" 
-            alt="GitHub repository creation page" 
-            className="w-full rounded-lg border border-gray-200 mb-2"
-          />
-          <p>1. 「所有者」欄でご自身のアカウントを選択してください</p>
-          <p>2. 「リポジトリ名」欄に好きな名前を入力してください（英数字、ハイフン、アンダースコアが使用可能）</p>
-          <p>3. 「説明（オプション）」欄にプロジェクトの説明を入力できます</p>
-          <p>4. 「公開」または「プライベート」を選択してください</p>
-          <p>5. 必要に応じて「READMEファイルを追加する」にチェックを入れてください</p>
-          <p>6. 「リポジトリを作成する」ボタンをクリックして完了です</p>
+          <p>1. Netlifyにサインアップまたはログインします</p>
+          <p>2. 「Add new site」→「Import an existing project」を選択</p>
+          <p>3. GitHubからリポジトリを選択してデプロイ</p>
+          <p>4. 「Domain settings」→「Add custom domain」をクリック</p>
+          <p>5. お持ちのドメインを入力して「Verify」</p>
+          <p>6. DNSプロバイダーでNetlifyのネームサーバーを設定</p>
+          <p>詳しくは<a href="https://docs.lovable.dev/tips-tricks/custom-domain/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">カスタムドメインのドキュメント</a>をご覧ください</p>
         </div>
       ),
       duration: 15000,
     });
-    window.open('https://github.com/new', '_blank');
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-navy/90 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo and Text Container */}
-          <div className="flex items-center space-x-3 sm:space-x-4">
-            <img 
-              src="/lovable-uploads/8a96f1e6-ff15-4a15-994a-e0237be603a3.png" 
-              alt="Core Logo" 
-              className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
-              loading="lazy"
-              decoding="async"
-            />
-            <div className="flex items-center space-x-1 sm:space-x-2">
-              <span className="text-gold text-xl sm:text-2xl lg:text-3xl font-extrabold">CORE</span>
-              <span className="text-white text-xl sm:text-2xl lg:text-3xl font-extrabold">E-Sports</span>
-            </div>
-          </div>
-          
-          {/* Twitter, Edit code and Hamburger Menu Icons Container */}
-          <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
-            <a
-              href="https://x.com/Core_official__"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-twitter hover:text-twitter-dark transition-colors p-1.5 sm:p-2"
-            >
-              <TwitterIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 fill-current" />
-            </a>
-            <div className="relative">
-              {showGuide && (
-                <div className="absolute -top-14 left-1/2 -translate-x-1/2 text-gold animate-bounce">
-                  <ArrowUp className="h-8 w-8" />
-                  <p className="text-sm whitespace-nowrap font-medium">ここをクリック!</p>
-                </div>
-              )}
-              <Button
-                onClick={handleShare}
-                variant="default"
-                className="bg-blue-500 hover:bg-blue-600 text-white"
-              >
-                Export to GitHub
-              </Button>
-            </div>
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-gold transition-colors p-1.5 sm:p-2"
-              aria-label="Toggle menu"
-            >
-              <Menu className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
-            </button>
-          </div>
-
-          {/* Mobile Menu Overlay */}
-          {isMenuOpen && (
-            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" style={{ top: '80px' }}>
-              <div 
-                className={`fixed right-0 top-20 h-[calc(100vh-80px)] w-full max-w-sm bg-[#FFFBEA] shadow-lg transform transition-transform duration-300 ease-in-out ${
-                  isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-                }`}
-              >
-                <div className="flex flex-col items-center justify-center h-full py-8 space-y-6">
-                  {tabs.map((tab) => (
-                    <button
-                      key={tab.id}
-                      onClick={() => scrollToSection(tab.id)}
-                      className={`px-6 py-3 text-xl sm:text-2xl font-extrabold w-full text-center transition-colors border-b-2 border-black/20 ${
-                        activeTab === tab.id 
-                          ? 'text-[#D4AF37]' 
-                          : 'text-[#1A202C] hover:text-[#D4AF37]'
-                      }`}
+    <nav className="border-b">
+      <div className="flex h-16 items-center px-4">
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>CORE E-Sports</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="grid gap-3 p-6 w-[400px]">
+                  <div className="space-y-4">
+                    <Button 
+                      variant="outline" 
+                      className="w-full justify-start"
+                      onClick={handleExportToGithub}
                     >
-                      {tab.label}
-                    </button>
-                  ))}
+                      <Github className="mr-2 h-4 w-4" />
+                      Export to GitHub
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      className="w-full justify-start"
+                      onClick={handleCustomDomain}
+                    >
+                      カスタムドメインを設定
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </div>
-          )}
-        </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
     </nav>
   );
