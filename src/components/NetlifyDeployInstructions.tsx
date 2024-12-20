@@ -31,7 +31,7 @@ const NetlifyDeployInstructions = () => {
               <ul className="list-disc pl-4 mt-1">
                 <li>Lovableのプロジェクトページを開く</li>
                 <li>右上の「Share」ボタンをクリック</li>
-                <li>「Download」をクリックしてZIPファイルをダウンロード</li>
+                <li>「Export」をクリックしてZIPファイルをダウンロード</li>
                 <li>ダウンロードしたZIPファイルを展開（解凍）する</li>
                 <li>展開したフォルダが、あなたのプロジェクトのフォルダです</li>
               </ul>
@@ -48,7 +48,7 @@ const NetlifyDeployInstructions = () => {
                 <li>例：
                   <ul className="list-disc pl-4 mt-1">
                     <li>Windowsの場合：cd C:\Users\あなたの名前\Downloads\プロジェクト名</li>
-                    <li>Macの場合：cd /Users/あなたの名前/Downloads/プロジェクト名</li>
+                    <li>Macの場合：cd /Users/あなたの名前/Downloads\プロジェクト名</li>
                   </ul>
                 </li>
               </ul>
