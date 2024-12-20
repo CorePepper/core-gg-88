@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { TwitterIcon, Menu, FileEdit, ArrowUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
@@ -67,7 +68,7 @@ const Navigation = () => {
     window.open('https://github.com/new', '_blank');
     toast({
       title: "GitHubリポジトリの作成手順",
-      description: "1. 「Repository name」にリポジトリ名を入力してください\n\n2. 「Public」または「Private」を選択してください\n\n3. 「Create repository」をクリックしてください",
+      description: "1. 青い「Export to GitHub」ボタンをクリックしてください\n\n2. 「Repository name」にリポジトリ名を入力してください\n\n3. 「Public」または「Private」を選択してください\n\n4. 「Create repository」をクリックしてください",
       duration: 10000,
     });
   };
@@ -108,13 +109,13 @@ const Navigation = () => {
                   <p className="text-sm whitespace-nowrap font-medium">ここをクリック!</p>
                 </div>
               )}
-              <button
+              <Button
                 onClick={handleShare}
-                className="text-white hover:text-gold transition-colors p-1.5 sm:p-2 relative"
-                aria-label="Create GitHub repository"
+                variant="default"
+                className="bg-blue-500 hover:bg-blue-600 text-white"
               >
-                <FileEdit className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
-              </button>
+                Export to GitHub
+              </Button>
             </div>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
