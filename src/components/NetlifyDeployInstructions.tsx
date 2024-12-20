@@ -9,9 +9,8 @@ const NetlifyDeployInstructions = () => {
           <strong>重要: プロジェクトのエクスポートについて</strong>
           <ul className="list-disc pl-4 mt-1">
             <li>画面右上の「Edit code」ボタンをクリック</li>
-            <li>左側のファイル一覧から必要なファイルをダウンロード</li>
-            <li>ダウンロードしたファイルを一つのフォルダにまとめる</li>
-            <li>まとめたフォルダが、あなたのプロジェクトのフォルダです</li>
+            <li>表示されるメニューから「Clone」を選択し、HTTPSまたはSSHのURLをコピー</li>
+            <li>または「View on GitHub」からGitHubで直接ファイルを確認することもできます</li>
           </ul>
         </li>
       </ul>
