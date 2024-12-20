@@ -7,22 +7,19 @@ import Team from "@/components/Team";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import CTASection from "@/components/CTASection";
-import FAQ from "@/components/FAQ";
 
 const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Core ゲーム用指サック",
-    "description": "手汗対策に最適なゲーム用指サック。快適な操作性と最高のパフォーマンスを提供します。",
-    "brand": {
-      "@type": "Brand",
-      "name": "Core"
-    },
+    "description": "Coreのゲーム用指サックは、快適な操作性と最高のパフォーマンスを提供します。",
+    "image": "https://core-esports.com/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png",
+    "brand": "Core",
     "offers": {
       "@type": "Offer",
-      "price": "1500",
       "priceCurrency": "JPY",
+      "price": "1500",
       "availability": "https://schema.org/InStock"
     }
   };
@@ -30,15 +27,14 @@ const Index = () => {
   return (
     <div className="bg-navy min-h-screen">
       <Helmet>
-        <title>最高品質のゲーム用指サック - Core公式サイト</title>
-        <meta name="description" content="Coreのゲーム用指サックで手汗問題を解決。快適な操作性と最高のパフォーマンスを実現し、ゲームプレイを向上させます。" />
-        <meta name="keywords" content="ゲーム用指サック,指サック,手汗対策,ゲーミングギア,スマホゲーム,操作性向上,Core" />
-        <meta property="og:title" content="最高品質のゲーム用指サック - Core公式サイト" />
-        <meta property="og:description" content="Coreのゲーム用指サックで手汗問題を解決。快適な操作性と最高のパフォーマンスを実現し、ゲームプレイを向上させます。" />
+        <title>最高品質のゲーム用指サック - Core</title>
+        <meta name="description" content="Coreのゲーム用指サックは、快適な操作性と最高のパフォーマンスを提供します。指サック選びならCore製品。" />
+        <meta name="keywords" content="ゲーム用指サック,指サック,Eスポーツ,快適,操作性" />
+        <meta property="og:title" content="最高品質のゲーム用指サック - Core" />
+        <meta property="og:description" content="Coreのゲーム用指サックは、快適な操作性と最高のパフォーマンスを提供します。指サック選びならCore製品。" />
         <meta property="og:image" content="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png" />
         <meta property="og:url" content="https://core-esports.com" />
         <meta property="og:type" content="website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://core-esports.com" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -46,14 +42,13 @@ const Index = () => {
       </Helmet>
       <Navigation />
       <main>
-        <h1 className="sr-only">最高品質のゲーム用指サック - Core公式サイト</h1>
+        <h1 className="sr-only">最高品質のゲーム用指サック - Core</h1>
         <Hero />
         <Features />
         <Reviews />
         <CTASection />
         <Team />
         <About />
-        <FAQ />
         <Contact />
       </main>
     </div>
