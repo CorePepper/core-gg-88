@@ -29,13 +29,14 @@ const Navigation = () => {
             </li>
           </ul>
           
-          <p className="font-semibold mt-4">2. 設定画面へのアクセス</p>
+          <p className="font-semibold mt-4">2. サイト設定画面へのアクセス</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>Netlifyのダッシュボードで:
               <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
-                <li>左側のサイドバーから「Team settings」を選択</li>
-                <li>「General」タブを開く</li>
-                <li>ここで各種設定が可能です</li>
+                <li>左側のサイドバーから「Sites」を選択</li>
+                <li>対象のサイトをクリック</li>
+                <li>「Site settings」を選択</li>
+                <li>「Build & deploy」をクリック</li>
               </ul>
             </li>
           </ul>
@@ -44,7 +45,6 @@ const Navigation = () => {
           <ul className="list-disc pl-4 space-y-1">
             <li>「Branch to deploy」でブランチが表示されない場合:
               <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
-                <li>Netlifyの設定画面で「Site settings」を確認</li>
                 <li>「Build & deploy」→「Continuous Deployment」を開く</li>
                 <li>「Connect to Git provider」からGitHubとの連携を確認</li>
                 <li>必要に応じて再連携を行ってください</li>
