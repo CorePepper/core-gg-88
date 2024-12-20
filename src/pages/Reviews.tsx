@@ -49,6 +49,8 @@ const reviews: Review[] = [
 ];
 
 const ReviewItem = ({ review }: { review: Review }) => {
+  const isEmperor = review.name === "SG/αD 皇帝";
+  
   return (
     <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
       <div className="flex flex-col sm:flex-row gap-4 items-start">
@@ -58,7 +60,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
               {[...Array(review.rating)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-5 h-5 text-gold fill-current"
+                  className={`w-5 h-5 text-gold fill-current ${isEmperor ? 'scale-150' : ''}`}
                 />
               ))}
             </div>
