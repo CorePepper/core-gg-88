@@ -33,8 +33,9 @@ const Navigation = () => {
           <ul className="list-disc pl-4 space-y-1">
             <li>デプロイするブランチ: 
               <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
-                <li>「main」を選択（デフォルトで選択されています）</li>
+                <li>「Branch to deploy」から「main」を選択</li>
                 <li>これはGitHubの主要ブランチです</li>
+                <li>通常はデフォルトで選択されています</li>
               </ul>
             </li>
             <li>ベースディレクトリ:
