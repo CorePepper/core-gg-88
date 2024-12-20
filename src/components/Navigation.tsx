@@ -16,6 +16,7 @@ const Navigation = () => {
       title: "Netlifyでのデプロイ手順",
       description: (
         <div className="space-y-2">
+
           <p className="font-semibold">1. 基本設定</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>チーム選択: "CORE" を選択</li>
@@ -30,12 +31,28 @@ const Navigation = () => {
           
           <p className="font-semibold mt-4">2. ビルド設定</p>
           <ul className="list-disc pl-4 space-y-1">
-            <li>ブランチ: main</li>
-            <li>ベースディレクトリ: プロジェクトのルートパス（通常は空欄）</li>
-            <li>ビルドコマンド: npm run build</li>
+            <li>デプロイするブランチ: 
+              <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
+                <li>「main」を選択（デフォルトで選択されています）</li>
+                <li>これはGitHubの主要ブランチです</li>
+              </ul>
+            </li>
+            <li>ベースディレクトリ:
+              <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
+                <li>空欄のままで問題ありません</li>
+                <li>プロジェクトのルートフォルダが自動的に認識されます</li>
+              </ul>
+            </li>
+            <li>ビルドコマンド:
+              <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
+                <li>「npm run build」と入力してください</li>
+                <li>このコマンドでプロジェクトが本番用にビルドされます</li>
+                <li>package.jsonに定義されている標準的なビルドコマンドです</li>
+              </ul>
+            </li>
           </ul>
-          
-          <p className="font-semibold mt-4">3. デプロイ</p>
+
+          <p className="font-semibold mt-4">3. デプロイ開始</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>設定を確認後、「Deploy」ボタンをクリック</li>
             <li>ビルドとデプロイが自動的に開始されます</li>
@@ -48,6 +65,7 @@ const Navigation = () => {
           </ul>
           
           <p className="mt-4">詳しくは<a href="https://docs.netlify.com/site-deploys/create-deploys/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Netlifyのドキュメント</a>をご覧ください</p>
+
         </div>
       ),
       duration: 30000,
