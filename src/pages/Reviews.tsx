@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Star } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
@@ -119,18 +118,6 @@ const Reviews = () => {
 
   return (
     <div className="min-h-screen bg-navy">
-      <Helmet>
-        <title>ユーザーレビュー - Core Eスポーツギア</title>
-        <meta name="description" content="プロゲーマーやユーザーからの実際の声。Core製品の品質と性能が高く評価されています。" />
-        <meta name="keywords" content="Core指サック,ゲーミングギア,レビュー,プロゲーマー,ユーザー評価,Eスポーツ" />
-        <meta property="og:title" content="ユーザーレビュー - Core Eスポーツギア" />
-        <meta property="og:description" content="プロゲーマーやユーザーからの実際の声。Core製品の品質と性能が高く評価されています。" />
-        <meta property="og:image" content="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png" />
-        <meta property="og:url" content="https://core-esports.com/reviews" />
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href="https://core-esports.com/reviews" />
-      </Helmet>
-
       <Navigation />
       <div className="container mx-auto px-4 py-20">
         <button
