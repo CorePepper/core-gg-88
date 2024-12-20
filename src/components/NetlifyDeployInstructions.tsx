@@ -26,12 +26,56 @@ const NetlifyDeployInstructions = () => {
         <li className="text-red-600">ブランチが表示されない場合の対処方法:
           <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
             <li>GitHubで新しいリポジトリを作成した直後の場合は、まずローカルでコミットを作成してプッシュする必要があります</li>
-            <li>以下のコマンドを順番に実行:
-              <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
-                git add .{"\n"}
-                git commit -m "Initial commit"{"\n"}
-                git push origin main
-              </pre>
+            <li>ローカルでのGit操作手順:
+              <ol className="list-decimal pl-4 mt-1 space-y-2">
+                <li>
+                  <strong>Step 1: ターミナルを開く</strong>
+                  <ul className="list-disc pl-4 mt-1">
+                    <li>Windowsの場合: コマンドプロンプトまたはPowerShell</li>
+                    <li>MacやLinuxの場合: ターミナル</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Step 2: プロジェクトフォルダに移動</strong>
+                  <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                    cd プロジェクトのパス
+                  </pre>
+                  <p className="text-sm text-gray-600 mt-1">例: cd C:\Users\ユーザー名\projects\my-project</p>
+                </li>
+                <li>
+                  <strong>Step 3: Gitの初期化（新規リポジトリの場合のみ）</strong>
+                  <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                    git init
+                  </pre>
+                </li>
+                <li>
+                  <strong>Step 4: リモートリポジトリの追加（新規リポジトリの場合のみ）</strong>
+                  <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                    git remote add origin リポジトリのURL
+                  </pre>
+                  <p className="text-sm text-gray-600 mt-1">※リポジトリのURLはGitHubのリポジトリページで確認できます</p>
+                </li>
+                <li>
+                  <strong>Step 5: 変更をステージングに追加</strong>
+                  <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                    git add .
+                  </pre>
+                  <p className="text-sm text-gray-600 mt-1">※全てのファイルを追加します</p>
+                </li>
+                <li>
+                  <strong>Step 6: コミットの作成</strong>
+                  <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                    git commit -m "Initial commit"
+                  </pre>
+                  <p className="text-sm text-gray-600 mt-1">※"Initial commit"は任意のコミットメッセージに変更可能</p>
+                </li>
+                <li>
+                  <strong>Step 7: リモートリポジトリへのプッシュ</strong>
+                  <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                    git push origin main
+                  </pre>
+                </li>
+              </ol>
             </li>
             <li>プッシュ後、Netlifyの画面をリロードするとブランチが表示されるようになります</li>
           </ul>
