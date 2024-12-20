@@ -14,11 +14,11 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Features />
+      <CTASection />
       <Reviews />
       <Team />
       <About />
       <Contact />
-      <CTASection />
     </div>
   );
 };
