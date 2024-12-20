@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://core-esports.com/sitemap.xml
