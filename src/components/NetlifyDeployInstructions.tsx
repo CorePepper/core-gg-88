@@ -23,11 +23,23 @@ const NetlifyDeployInstructions = () => {
             <li>リストから対象のリポジトリを選択</li>
           </ul>
         </li>
+        <li className="text-red-600">ブランチが表示されない場合の対処方法:
+          <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
+            <li>GitHubで新しいリポジトリを作成した直後の場合は、まずローカルでコミットを作成してプッシュする必要があります</li>
+            <li>以下のコマンドを順番に実行:
+              <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                git add .{"\n"}
+                git commit -m "Initial commit"{"\n"}
+                git push origin main
+              </pre>
+            </li>
+            <li>プッシュ後、Netlifyの画面をリロードするとブランチが表示されるようになります</li>
+          </ul>
+        </li>
         <li>ブランチの選択:
           <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
-            <li>「Branch to deploy」でブランチが表示されない場合は、GitHubでリポジトリにブランチが存在することを確認</li>
             <li>通常は「main」または「master」ブランチを選択</li>
-            <li>必要に応じてGitHubで新しいブランチを作成してください</li>
+            <li>ブランチ名は新規リポジトリの場合、デフォルトで「main」になっています</li>
           </ul>
         </li>
       </ul>
