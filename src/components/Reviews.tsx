@@ -2,17 +2,17 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "ゲーマーA",
+    title: "耐久性",
     rating: 5,
     text: "タッチ感度が素晴らしく、長時間プレイでも快適です。",
   },
   {
-    name: "プロゲーマーB",
+    title: "耐久性",
     rating: 5,
     text: "大会で使用していますが、パフォーマンスが格段に向上しました。",
   },
   {
-    name: "ストリーマーC",
+    title: "耐久性",
     rating: 5,
     text: "耐久性が高く、長期間使用できるのが魅力です。",
   },
@@ -39,6 +39,7 @@ const Reviews = () => {
               key={index}
               className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg hover:transform hover:-translate-y-1 transition-transform"
             >
+              <h3 className="text-2xl font-bold text-gold mb-4">{review.title}</h3>
               <div className="flex items-center mb-4">
                 {[...Array(review.rating)].map((_, i) => (
                   <Star
@@ -48,7 +49,6 @@ const Reviews = () => {
                 ))}
               </div>
               <p className="text-white/80 mb-4">{review.text}</p>
-              <p className="text-gold font-semibold">{review.name}</p>
             </div>
           ))}
         </div>
