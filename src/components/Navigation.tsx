@@ -29,11 +29,23 @@ const Navigation = () => {
             </li>
           </ul>
           
-          <p className="font-semibold mt-4">2. ビルド設定</p>
+          <p className="font-semibold mt-4">2. GitHubとの連携確認</p>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>「Branch to deploy」でブランチが表示されない場合:
+              <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
+                <li>Netlifyの設定画面で「Site settings」を確認</li>
+                <li>「Build & deploy」→「Continuous Deployment」を開く</li>
+                <li>「Connect to Git provider」からGitHubとの連携を確認</li>
+                <li>必要に応じて再連携を行ってください</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p className="font-semibold mt-4">3. ビルド設定</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>デプロイするブランチ: 
               <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
-                <li>「Branch to deploy」から「main」を選択</li>
+                <li>GitHubとの連携後、「Branch to deploy」から「main」を選択</li>
                 <li>これはGitHubの主要ブランチです</li>
                 <li>通常はデフォルトで選択されています</li>
               </ul>
@@ -66,13 +78,13 @@ const Navigation = () => {
             </li>
           </ul>
 
-          <p className="font-semibold mt-4">3. デプロイ開始</p>
+          <p className="font-semibold mt-4">4. デプロイ開始</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>設定を確認後、「Deploy」ボタンをクリック</li>
             <li>ビルドとデプロイが自動的に開始されます</li>
           </ul>
 
-          <p className="font-semibold mt-4">4. カスタムドメインの設定</p>
+          <p className="font-semibold mt-4">5. カスタムドメインの設定</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>デプロイ完了後、「Domain settings」→「Add custom domain」から設定可能</li>
             <li>購入済みのドメインをここで設定します</li>
