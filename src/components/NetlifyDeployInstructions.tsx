@@ -6,9 +6,9 @@ const NetlifyDeployInstructions = () => {
       <p className="font-semibold">1. プロジェクトのフォルダを見つける</p>
       <ul className="list-disc pl-4 space-y-1">
         <li>
-          <strong>重要: Shareボタンの場所について</strong>
+          <strong>重要: プロジェクトのエクスポートについて</strong>
           <ul className="list-disc pl-4 mt-1">
-            <li>画面右上の「Publish」ボタンの横にある「⋮」（三点リーダー）をクリック</li>
+            <li>画面右上の「Share」ボタンをクリック</li>
             <li>表示されるメニューから「Export」を選択</li>
             <li>ダウンロードしたZIPファイルを展開（解凍）する</li>
             <li>展開したフォルダが、あなたのプロジェクトのフォルダです</li>
