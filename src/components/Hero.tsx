@@ -29,8 +29,8 @@ const Hero = () => {
             <span className="hidden md:block mt-2">Defining Victory.</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-8 sm:mb-12 leading-relaxed">
-            <span className="block md:inline">プロゲーマーが認めた</span>
-            <span className="block md:inline md:ml-1">最高品質の指サック</span>
+            <span className="block md:inline">ゲームプレイヤーのための</span>
+            <span className="block md:inline md:ml-1">最高品質を追求</span>
           </p>
           <button
             onClick={scrollToContact}
