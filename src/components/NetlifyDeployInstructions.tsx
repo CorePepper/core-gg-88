@@ -8,7 +8,7 @@ const NetlifyDeployInstructions = () => {
         <li>
           <strong>重要: プロジェクトのエクスポートについて</strong>
           <ul className="list-disc pl-4 mt-1">
-            <li>画面右上の「Share」ボタンをクリック</li>
+            <li>画面右上の「Publish」ボタンの横にある縦三点リーダー（⋮）をクリック</li>
             <li>表示されるメニューから「Export」を選択</li>
             <li>ダウンロードしたZIPファイルを展開（解凍）する</li>
             <li>展開したフォルダが、あなたのプロジェクトのフォルダです</li>
