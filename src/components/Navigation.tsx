@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { TwitterIcon, Menu, Share } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { TwitterIcon, Menu, FileEdit } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
@@ -57,7 +57,7 @@ const Navigation = () => {
     console.log('Showing GitHub export guidance toast with URL instructions');
     toast({
       title: "GitHubへのエクスポート手順",
-      description: "【GitHubエクスポートの手順】\n1. 画面上部の「Share」アイコン（共有アイコン）をクリックしてください。表示されるポップアップで、リポジトリ名を入力（例：core-esports）\n2. 「Public」（公開）または「Private」（非公開）を選択\n3. 「Export to GitHub」をクリック\n\n【URLの確認方法】\n・エクスポート完了後、画面上部に緑色の通知バーが表示されます\n・通知バーの中にあるURLをクリックすると、GitHubリポジトリが開きます\n・この通知バーは一時的に表示されるので、必要な場合はURLをコピーしてください",
+      description: "【GitHubエクスポートの手順】\n1. 画面上部の「Edit code」アイコン（鉛筆アイコン）をクリックしてください。表示されるポップアップで、リポジトリ名を入力（例：core-esports）\n2. 「Public」（公開）または「Private」（非公開）を選択\n3. 「Export to GitHub」をクリック\n\n【URLの確認方法】\n・エクスポート完了後、画面上部に緑色の通知バーが表示されます\n・通知バーの中にあるURLをクリックすると、GitHubリポジトリが開きます\n・この通知バーは一時的に表示されるので、必要な場合はURLをコピーしてください",
       duration: 25000,
     });
   };
@@ -81,7 +81,7 @@ const Navigation = () => {
             </div>
           </div>
           
-          {/* Twitter, Share and Hamburger Menu Icons Container */}
+          {/* Twitter, Edit code and Hamburger Menu Icons Container */}
           <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
             <a
               href="https://x.com/Core_official__"
@@ -94,9 +94,9 @@ const Navigation = () => {
             <button
               onClick={handleShare}
               className="text-white hover:text-gold transition-colors p-1.5 sm:p-2"
-              aria-label="Share project"
+              aria-label="Edit code"
             >
-              <Share className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
+              <FileEdit className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
