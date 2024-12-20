@@ -1,6 +1,17 @@
 import React from "react";
+import { Button } from "./ui/button";
+import { toast } from "./ui/use-toast";
 
 const NetlifyDeployInstructions = () => {
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      toast({
+        title: "コピーしました",
+        description: "クリップボードにコピーされました",
+      });
+    });
+  };
+
   return (
     <div className="space-y-4 max-w-full overflow-x-hidden p-4">
       <h2 className="text-xl font-bold mb-4">Netlifyデプロイの手順書</h2>
@@ -36,38 +47,94 @@ const NetlifyDeployInstructions = () => {
           <div className="space-y-4">
             <div>
               <p className="font-medium mb-2">1. プロジェクトをダウンロード:</p>
-              <div className="bg-gray-100 p-3 rounded">
+              <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                 <code>git clone https://github.com/CorePepper/core-gg.git</code>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => copyToClipboard("git clone https://github.com/CorePepper/core-gg.git")}
+                >
+                  コピー
+                </Button>
               </div>
             </div>
             
             <div>
               <p className="font-medium mb-2">2. フォルダに移動:</p>
-              <div className="bg-gray-100 p-3 rounded">
+              <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                 <code>cd core-gg</code>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => copyToClipboard("cd core-gg")}
+                >
+                  コピー
+                </Button>
               </div>
             </div>
 
             <div>
               <p className="font-medium mb-2">3. Gitの初期化と設定:</p>
               <div className="space-y-2">
-                <div className="bg-gray-100 p-3 rounded">
+                <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                   <code>git init</code>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => copyToClipboard("git init")}
+                  >
+                    コピー
+                  </Button>
                 </div>
-                <div className="bg-gray-100 p-3 rounded">
+                <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                   <code>git add .</code>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => copyToClipboard("git add .")}
+                  >
+                    コピー
+                  </Button>
                 </div>
-                <div className="bg-gray-100 p-3 rounded">
+                <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                   <code>git commit -m "初回コミット"</code>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => copyToClipboard('git commit -m "初回コミット"')}
+                  >
+                    コピー
+                  </Button>
                 </div>
-                <div className="bg-gray-100 p-3 rounded">
+                <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                   <code>git branch -M main</code>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => copyToClipboard("git branch -M main")}
+                  >
+                    コピー
+                  </Button>
                 </div>
-                <div className="bg-gray-100 p-3 rounded">
+                <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                   <code>git remote add origin [あなたのGitHubリポジトリのURL]</code>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => copyToClipboard("git remote add origin ")}
+                  >
+                    コピー
+                  </Button>
                 </div>
-                <div className="bg-gray-100 p-3 rounded">
+                <div className="bg-gray-100 p-3 rounded flex justify-between items-center">
                   <code>git push -u origin main</code>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => copyToClipboard("git push -u origin main")}
+                  >
+                    コピー
+                  </Button>
                 </div>
               </div>
             </div>
