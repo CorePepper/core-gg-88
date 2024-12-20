@@ -27,23 +27,31 @@ const NetlifyDeployInstructions = () => {
           <ul className="list-disc pl-4 mt-1 text-sm text-gray-600">
             <li>以下の手順で、ファイルをGitHubに送信する必要があります：</li>
             <li>
-              <strong>手順1：パソコンでプログラムを開く</strong>
+              <strong>手順1：プロジェクトのフォルダを見つける</strong>
               <ul className="list-disc pl-4 mt-1">
-                <li>Windowsの場合：スタートメニューから「コマンドプロンプト」を検索して開く</li>
-                <li>Macの場合：Spotlightで「ターミナル」を検索して開く</li>
+                <li>Lovableのプロジェクトページを開く</li>
+                <li>右上の「Share」ボタンをクリック</li>
+                <li>「Download」をクリックしてZIPファイルをダウンロード</li>
+                <li>ダウンロードしたZIPファイルを展開（解凍）する</li>
+                <li>展開したフォルダが、あなたのプロジェクトのフォルダです</li>
               </ul>
             </li>
             <li>
-              <strong>手順2：プロジェクトのフォルダに移動</strong>
-              <p className="text-sm text-gray-600 mt-1">
-                下のコマンドをコピーして貼り付け、プロジェクトのフォルダの場所に変更してください：
-              </p>
-              <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
-                cd プロジェクトのフォルダの場所
-              </pre>
-              <p className="text-sm text-gray-600 mt-1">
-                例：cd C:\Users\あなたの名前\デスクトップ\プロジェクト名
-              </p>
+              <strong>手順2：プログラムを開いてフォルダに移動</strong>
+              <ul className="list-disc pl-4 mt-1">
+                <li>Windowsの場合：スタートメニューから「コマンドプロンプト」を検索して開く</li>
+                <li>Macの場合：Spotlightで「ターミナル」を検索して開く</li>
+                <li>下のコマンドをコピーして貼り付け、プロジェクトのフォルダの場所に変更してください：</li>
+                <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+                  cd プロジェクトのフォルダの場所
+                </pre>
+                <li>例：
+                  <ul className="list-disc pl-4 mt-1">
+                    <li>Windowsの場合：cd C:\Users\あなたの名前\Downloads\プロジェクト名</li>
+                    <li>Macの場合：cd /Users/あなたの名前/Downloads/プロジェクト名</li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li>
               <strong>手順3：必要なコマンドを順番に実行</strong>
