@@ -65,12 +65,12 @@ const Navigation = () => {
 
   const handleShare = () => {
     console.log('Opening GitHub export dialog');
-    window.open('https://github.com/new', '_blank');
     toast({
       title: "GitHubリポジトリの作成手順",
-      description: "1. 青い「Export to GitHub」ボタンをクリックしてください\n\n2. 「Repository name」にリポジトリ名を入力してください\n\n3. 「Public」または「Private」を選択してください\n\n4. 「Create repository」をクリックしてください",
+      description: "1. 「Repository name」にリポジトリ名を入力してください\n\n2. 「Public」または「Private」を選択してください\n\n3. 「Create repository」をクリックしてください",
       duration: 10000,
     });
+    window.open('https://github.com/new', '_blank');
   };
 
   return (
