@@ -73,7 +73,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
                 <img
                   src={review.secondImage}
                   alt="Additional review image"
-                  className="w-full h-auto rounded-lg object-cover"
+                  className="w-full h-auto rounded-lg object-cover transform scale-120"
                 />
               </div>
             )}
