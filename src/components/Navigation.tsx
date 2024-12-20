@@ -67,7 +67,18 @@ const Navigation = () => {
     console.log('Opening GitHub export dialog');
     toast({
       title: "GitHubリポジトリの作成手順",
-      description: "1. 「Repository name」にリポジトリ名を入力してください\n\n2. 「Public」または「Private」を選択してください\n\n3. 「Create repository」をクリックしてください",
+      description: (
+        <div className="space-y-2">
+          <img 
+            src="/lovable-uploads/b5d7e000-c752-4203-858f-621275d36506.png" 
+            alt="GitHub repository creation page" 
+            className="w-full rounded-lg border border-gray-200 mb-2"
+          />
+          <p>1. 「Repository name」にリポジトリ名を入力してください</p>
+          <p>2. 「Public」または「Private」を選択してください</p>
+          <p>3. 「Create repository」をクリックしてください</p>
+        </div>
+      ),
       duration: 10000,
     });
     window.open('https://github.com/new', '_blank');
