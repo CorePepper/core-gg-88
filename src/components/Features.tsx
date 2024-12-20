@@ -29,7 +29,6 @@ const Features = () => {
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
-              heading={feature.heading}
             />
           ))}
         </div>

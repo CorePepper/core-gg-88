@@ -5,13 +5,11 @@ interface Feature {
   icon: LucideIcon;
   title: string[];
   description: string[];
-  heading: string;
 }
 
 export const features: Feature[] = [
   {
     icon: Star,
-    heading: "耐久性",
     title: ["累計30万個突破の信頼品質"],
     description: [
       "多くのプレイヤーに選ばれ",
@@ -20,7 +18,6 @@ export const features: Feature[] = [
   },
   {
     icon: ThumbsUp,
-    heading: "耐久性",
     title: ["Amazonベストセラー獲得"],
     description: [
       "ユーザーレビューで高評価を",
@@ -29,7 +26,6 @@ export const features: Feature[] = [
   },
   {
     icon: Zap,
-    heading: "耐久性",
     title: [
       "耐久性・快適さ",
       "最速反応を実現"
