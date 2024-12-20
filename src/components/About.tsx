@@ -1,4 +1,4 @@
-import { Building } from "lucide-react";
+import { Building, Mail } from "lucide-react";
 
 const About = () => {
   return (
@@ -20,10 +20,19 @@ const About = () => {
               革新を追求し、すべてのゲームプレイヤーに最高品質の体験を届ける
             </p>
             
-            <div className="text-white/80 space-y-2">
+            <div className="text-white/80 space-y-4">
               <p className="font-semibold text-gold">会社情報</p>
-              <p>会社名: 合同会社CORE</p>
-              <p>住所: 愛媛県松山市余戸中6-7-9-A</p>
+              <div className="space-y-2">
+                <p>会社名: 合同会社CORE</p>
+                <p>住所: 愛媛県松山市余戸中6-7-9-A</p>
+                <a 
+                  href="mailto:info@core-gg.com"
+                  className="inline-flex items-center gap-2 hover:text-gold transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>info@core-gg.com</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
