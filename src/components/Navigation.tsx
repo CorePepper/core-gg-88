@@ -13,19 +13,32 @@ const Navigation = () => {
 
   const handleCustomDomain = () => {
     toast({
-      title: "カスタムドメインの設定手順",
+      title: "Netlifyでのデプロイ手順",
       description: (
         <div className="space-y-2">
-          <p>1. Netlifyにサインアップまたはログインします</p>
-          <p>2. 「Add new site」→「Import an existing project」を選択</p>
-          <p>3. GitHubからリポジトリを選択してデプロイ</p>
-          <p>4. 「Domain settings」→「Add custom domain」をクリック</p>
-          <p>5. お持ちのドメインを入力して「Verify」</p>
-          <p>6. DNSプロバイダーでNetlifyのネームサーバーを設定</p>
-          <p>詳しくは<a href="https://docs.lovable.dev/tips-tricks/custom-domain/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">カスタムドメインのドキュメント</a>をご覧ください</p>
+          <p className="font-semibold">1. 基本設定</p>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>チーム選択: "CORE" を選択</li>
+            <li>サイト名: 任意のURLを入力（空欄の場合は自動生成）</li>
+          </ul>
+          
+          <p className="font-semibold mt-4">2. ビルド設定</p>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>ブランチ: main</li>
+            <li>ベースディレクトリ: プロジェクトのルートパス（通常は空欄）</li>
+            <li>ビルドコマンド: npm run build</li>
+          </ul>
+          
+          <p className="font-semibold mt-4">3. デプロイ</p>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>設定を確認後、「Deploy」ボタンをクリック</li>
+            <li>ビルドとデプロイが自動的に開始されます</li>
+          </ul>
+          
+          <p className="mt-4">詳しくは<a href="https://docs.netlify.com/site-deploys/create-deploys/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Netlifyのドキュメント</a>をご覧ください</p>
         </div>
       ),
-      duration: 15000,
+      duration: 30000,
     });
   };
 
@@ -52,7 +65,7 @@ const Navigation = () => {
                       className="w-full justify-start"
                       onClick={handleCustomDomain}
                     >
-                      カスタムドメインを設定
+                      Netlifyデプロイ手順
                     </Button>
                   </div>
                 </div>
