@@ -22,15 +22,13 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl text-gold font-extrabold mb-4 sm:mb-6 leading-tight">
-            <span className="block md:hidden">Pushing the Edge</span>
-            <span className="block md:hidden">of Excellence,</span>
-            <span className="block md:hidden">Defining Victory.</span>
-            <span className="hidden md:inline">Pushing the Edge of Excellence,</span>
-            <span className="hidden md:block mt-2">Defining Victory.</span>
+            <span className="block md:inline">ゲーム用指サックで</span>
+            <span className="block md:inline md:ml-2">操作性を最大化</span>
+            <span className="block mt-2">勝利への近道</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-8 sm:mb-12 leading-relaxed">
-            <span className="block md:inline">ゲームプレイヤーのための</span>
-            <span className="block md:inline md:ml-1">最高品質を追求</span>
+            <span className="block md:inline">プロゲーマーが認めた</span>
+            <span className="block md:inline md:ml-1">最高品質の指サック</span>
           </p>
           <button
             onClick={scrollToContact}
