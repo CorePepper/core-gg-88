@@ -2,7 +2,7 @@ import React from "react";
 
 const NetlifyDeployInstructions = () => {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 max-w-full overflow-x-hidden">
       <p className="font-semibold">1. プロジェクトのフォルダを見つける</p>
       <ul className="list-disc pl-4 space-y-1">
         <li>
@@ -10,7 +10,7 @@ const NetlifyDeployInstructions = () => {
           <ul className="list-disc pl-4 mt-1">
             <li>画面右上の「Edit code」ボタンをクリック</li>
             <li>表示されるメニューから「Clone」を選択し、以下のいずれかのURLをコピー：
-              <ul className="list-disc pl-4 mt-1">
+              <ul className="list-disc pl-4 mt-1 break-all">
                 <li>HTTPS: https://github.com/CorePepper/core-gg.git</li>
                 <li>SSH: git@github.com:CorePepper/core-gg.git</li>
               </ul>
@@ -24,15 +24,15 @@ const NetlifyDeployInstructions = () => {
       <ul className="list-disc pl-4 space-y-1">
         <li>Windowsの場合：スタートメニューから「コマンドプロンプト」を検索して開く</li>
         <li>Macの場合：Spotlightで「ターミナル」を検索して開く</li>
-        <li>下のコマンドをコピーして貼り付け、プロジェクトのフォルダの場所に変更してください：
-          <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+        <li className="break-words">下のコマンドをコピーして貼り付け、プロジェクトのフォルダの場所に変更してください：
+          <pre className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto">
             cd プロジェクトのフォルダの場所
           </pre>
         </li>
         <li>例：
           <ul className="list-disc pl-4 mt-1">
-            <li>Windowsの場合：cd C:\Users\あなたの名前\Downloads\プロジェクト名</li>
-            <li>Macの場合：cd /Users/あなたの名前/Downloads/プロジェクト名</li>
+            <li className="break-all">Windowsの場合：cd C:\Users\あなたの名前\Downloads\プロジェクト名</li>
+            <li className="break-all">Macの場合：cd /Users/あなたの名前/Downloads/プロジェクト名</li>
           </ul>
         </li>
       </ul>
@@ -41,7 +41,7 @@ const NetlifyDeployInstructions = () => {
       <p className="text-sm text-gray-600 mt-1">
         以下のコマンドを1つずつコピーして貼り付け、Enterキーを押してください：
       </p>
-      <pre className="bg-gray-100 p-2 mt-1 rounded text-sm">
+      <pre className="bg-gray-100 p-2 mt-1 rounded text-sm overflow-x-auto whitespace-pre-wrap break-all">
         git init
         
         git remote add origin あなたのGitHubリポジトリのURL
@@ -52,7 +52,7 @@ const NetlifyDeployInstructions = () => {
 
         git push origin main
       </pre>
-      <p className="text-sm text-gray-600 mt-1">
+      <p className="text-sm text-gray-600 mt-1 break-words">
         ※GitHubリポジトリのURLは、GitHubのプロジェクトページの緑色の「Code」ボタンをクリックすると表示されます
       </p>
 
