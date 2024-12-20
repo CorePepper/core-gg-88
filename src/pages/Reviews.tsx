@@ -17,10 +17,10 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
-    name: "プロゲーマーB",
+    name: "SG/αD 皇帝",
     rating: 5,
     text: "長時間のプレイでも指先が快適で、パフォーマンスを最大限に発揮できます。プロ仕様の品質だと実感しています。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   },
   {
     name: "ストリーマーC",
