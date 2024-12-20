@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react";
-import { TwitterIcon, Menu, FileEdit } from "lucide-react";
+import { TwitterIcon, Menu, FileEdit, ArrowUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showGuide, setShowGuide] = useState(true);
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Hide guide after 10 seconds
+    const timer = setTimeout(() => {
+      setShowGuide(false);
+    }, 10000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -91,13 +100,21 @@ const Navigation = () => {
             >
               <TwitterIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 fill-current" />
             </a>
-            <button
-              onClick={handleShare}
-              className="text-white hover:text-gold transition-colors p-1.5 sm:p-2"
-              aria-label="Edit code"
-            >
-              <FileEdit className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
-            </button>
+            <div className="relative">
+              {showGuide && (
+                <div className="absolute -top-14 left-1/2 -translate-x-1/2 text-gold animate-bounce">
+                  <ArrowUp className="h-8 w-8" />
+                  <p className="text-sm whitespace-nowrap font-medium">ここをクリック!</p>
+                </div>
+              )}
+              <button
+                onClick={handleShare}
+                className="text-white hover:text-gold transition-colors p-1.5 sm:p-2 relative"
+                aria-label="Edit code"
+              >
+                <FileEdit className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
+              </button>
+            </div>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-gold transition-colors p-1.5 sm:p-2"
