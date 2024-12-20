@@ -16,8 +16,8 @@ const FeatureHeader = ({ title, subtitle }: FeatureHeaderProps) => {
         </span>
         {/* Mobile view - two lines */}
         <span className="block md:hidden">
-          <span className="block">日本一位のチームが開発した</span>
-          <span className="block mt-1">最高品質のゲーミング指サック</span>
+          <span className="block">プロゲーマーが開発した</span>
+          <span className="block mt-1">最高品質の指サック</span>
         </span>
       </p>
     </div>

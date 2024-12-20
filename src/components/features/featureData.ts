@@ -10,29 +10,29 @@ interface Feature {
 export const features: Feature[] = [
   {
     icon: Star,
-    title: ["累計30万個突破の信頼品質"],
+    title: ["30万個突破の実績"],
     description: [
-      "多くのプレイヤーに選ばれ",
-      "続ける実績が証明する品質"
+      "多くのプロプレイヤーに",
+      "選ばれ続ける信頼の品質"
     ]
   },
   {
     icon: ThumbsUp,
-    title: ["Amazonベストセラー獲得"],
+    title: ["Amazonで高評価"],
     description: [
-      "ユーザーレビューで高評価を",
-      "獲得し続けています"
+      "レビュー4.5以上の",
+      "高い満足度を獲得"
     ]
   },
   {
     icon: Zap,
     title: [
-      "耐久性・快適さ",
-      "最速反応を実現"
+      "プロ仕様の",
+      "最高品質"
     ],
     description: [
       "特殊素材による最速の",
-      "タッチ反応と完璧なフィット感"
+      "反応速度と完璧なフィット感"
     ]
   }
 ];
