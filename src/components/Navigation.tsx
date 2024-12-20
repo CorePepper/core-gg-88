@@ -54,11 +54,11 @@ const Navigation = () => {
   ];
 
   const handleShare = () => {
-    console.log('Showing share guidance toast');
+    console.log('Showing detailed share guidance toast');
     toast({
-      title: "プロジェクトを共有",
-      description: "画面右上の「Publish」ボタンからGitHubにエクスポートできます。",
-      duration: 5000,
+      title: "プロジェクトをGitHubに公開",
+      description: "1. 画面右上の「Share」→「Publish」をクリック\n2. GitHubアカウントと連携\n3. リポジトリ名を設定\n4. 「Publish」をクリックしてエクスポート\n5. 完了後、GitHubリポジトリのURLが表示されます",
+      duration: 10000,
     });
   };
 
