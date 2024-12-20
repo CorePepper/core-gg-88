@@ -54,11 +54,11 @@ const Navigation = () => {
   ];
 
   const handleShare = () => {
-    console.log('Showing detailed share guidance toast');
+    console.log('Showing GitHub export guidance toast');
     toast({
-      title: "プロジェクトをGitHubに公開",
-      description: "1. 画面右上の「Share」→「Publish」をクリック\n2. GitHubアカウントと連携\n3. リポジトリ名を設定\n4. 「Publish」をクリックしてエクスポート\n5. 完了後、GitHubリポジトリのURLが表示されます",
-      duration: 10000,
+      title: "GitHubへのエクスポート手順",
+      description: "1. GitHubアカウントとの連携画面が表示されます\n2. 「Authorize」をクリックしてGitHubと連携\n3. リポジトリ名を入力（例：core-esports）\n4. 「Create repository」をクリック\n5. エクスポートが完了すると、GitHubリポジトリのURLが表示されます\n\n※ エクスポート完了後、表示されたURLからGitHubリポジトリにアクセスできます",
+      duration: 15000,
     });
   };
 
