@@ -31,7 +31,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/reviews-game-finger-sleeves" element={<Reviews />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
