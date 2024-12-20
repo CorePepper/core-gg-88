@@ -11,7 +11,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData);
     toast({
       title: "送信完了",
@@ -89,9 +88,8 @@ const Contact = () => {
             </div>
           </form>
 
-          <div className="mt-12 text-center text-white/80">
-            <p className="mb-2">合同会社CORE</p>
-            <p>愛媛県松山市余戸中6-7-9-A</p>
+          <div className="mt-12 text-center text-white/60">
+            <p>© {new Date().getFullYear()} CORE LLC</p>
           </div>
         </div>
       </div>
