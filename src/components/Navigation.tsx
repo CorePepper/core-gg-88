@@ -63,11 +63,12 @@ const Navigation = () => {
   ];
 
   const handleShare = () => {
-    console.log('Showing GitHub export guidance toast with URL instructions');
+    console.log('Opening GitHub export dialog');
+    window.open('https://github.com/new', '_blank');
     toast({
-      title: "GitHubへのエクスポート手順",
-      description: "1. 画面上部の「Edit code」アイコン（鉛筆アイコン）をクリックしました✅\n\n2. ポップアップ画面の「Repository name」という入力欄に、リポジトリ名を入力してください（例：core-esports）\n\n3. 「Repository visibility」の下にある「Public」（公開）または「Private」（非公開）を選択\n\n4. 画面下部の青い「Export to GitHub」ボタンをクリック\n\n【URLの確認方法】\n・エクスポート完了後、画面上部に緑色の通知バー「Successfully exported to GitHub」が表示されます\n・通知バー内の青いリンクをクリックすると、GitHubリポジトリが開きます\n・この通知バーは一時的に表示されるので、必要な場合はURLをコピーしてください",
-      duration: 25000,
+      title: "GitHubリポジトリの作成手順",
+      description: "1. 「Repository name」にリポジトリ名を入力してください\n\n2. 「Public」または「Private」を選択してください\n\n3. 「Create repository」をクリックしてください",
+      duration: 10000,
     });
   };
 
@@ -110,7 +111,7 @@ const Navigation = () => {
               <button
                 onClick={handleShare}
                 className="text-white hover:text-gold transition-colors p-1.5 sm:p-2 relative"
-                aria-label="Edit code"
+                aria-label="Create GitHub repository"
               >
                 <FileEdit className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
               </button>
