@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { TwitterIcon, Menu, Share } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { toast } = useToast();
 
-  // スクロール制御
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -53,9 +54,12 @@ const Navigation = () => {
   ];
 
   const handleShare = () => {
-    // Lovableのシェア機能を使用するためのメッセージ
-    console.log('Lovableのシェア機能を使用してください。画面右上の「Publish」ボタンからGitHubにエクスポートできます。');
-    alert('Lovableのシェア機能を使用してください。画面右上の「Publish」ボタンからGitHubにエクスポートできます。');
+    console.log('Showing share guidance toast');
+    toast({
+      title: "プロジェクトを共有",
+      description: "画面右上の「Publish」ボタンからGitHubにエクスポートできます。",
+      duration: 5000,
+    });
   };
 
   return (
