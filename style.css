@@ -1,0 +1,66 @@
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
+:root {
+    --navy: #0A0F2C;
+    --navy-light: #1A2142;
+    --gold: #FFD700;
+    --gold-light: #FFE44D;
+    --twitter: #1DA1F2;
+    --twitter-dark: #1A91DA;
+}
+
+.bg-navy {
+    background-color: var(--navy);
+}
+
+.bg-navy-light {
+    background-color: var(--navy-light);
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.bg-gold {
+    background-color: var(--gold);
+}
+
+.hover\:bg-gold-light:hover {
+    background-color: var(--gold-light);
+}
+
+.text-twitter {
+    color: var(--twitter);
+}
+
+.hover\:text-twitter-dark:hover {
+    color: var(--twitter-dark);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-light);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section visibility control */
+section[id] {
+    scroll-margin-top: 4rem;
+}
