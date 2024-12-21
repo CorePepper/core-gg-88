@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TwitterIcon, Menu, Share } from "lucide-react";
+import { TwitterIcon, Menu } from "lucide-react";
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState("products");
@@ -71,7 +71,7 @@ const Navigation = () => {
             </div>
           </div>
           
-          {/* Twitter, Share and Hamburger Menu Icons Container */}
+          {/* Twitter and Hamburger Menu Icons Container */}
           <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
             <a
               href="https://x.com/Core_official__"
@@ -81,13 +81,6 @@ const Navigation = () => {
             >
               <TwitterIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 fill-current" />
             </a>
-            <button
-              onClick={() => window.location.href = 'https://github.com/new'}
-              className="text-white hover:text-gold transition-colors p-1.5 sm:p-2"
-              aria-label="Share project"
-            >
-              <Share className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8" />
-            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-gold transition-colors p-1.5 sm:p-2"
