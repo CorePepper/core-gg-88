@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Files</title>
+    <title>CORE E-Sports - ファイルダウンロード</title>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            background: #f5f5f5;
+            background: #0A0F2C;
+            color: white;
         }
         .download-list {
-            background: white;
+            background: #1A2142;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         .download-item {
             margin: 10px 0;
             padding: 10px;
-            border: 1px solid #eee;
+            border: 1px solid rgba(255,215,0,0.2);
             border-radius: 4px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .download-button {
-            background: #0A0F2C;
-            color: white;
+            background: #FFD700;
+            color: #0A0F2C;
             padding: 8px 16px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
         }
         .download-button:hover {
-            background: #1A2142;
+            background: #FFE44D;
         }
     </style>
 </head>
 <body>
     <div class="download-list">
-        <h2>ダウンロードファイル一覧</h2>
+        <h2>ランディングページファイル</h2>
         <div class="download-item">
             <span>index.html</span>
             <a href="index.html" download class="download-button">ダウンロード</a>
@@ -53,16 +56,12 @@
             <a href="style.css" download class="download-button">ダウンロード</a>
         </div>
         <div class="download-item">
-            <span>assets/core-logo.png</span>
-            <a href="assets/core-logo.png" download class="download-button">ダウンロード</a>
+            <span>core-logo.png</span>
+            <a href="/lovable-uploads/8a96f1e6-ff15-4a15-994a-e0237be603a3.png" download="core-logo.png" class="download-button">ダウンロード</a>
         </div>
         <div class="download-item">
-            <span>assets/favicon.ico</span>
-            <a href="assets/favicon.ico" download class="download-button">ダウンロード</a>
-        </div>
-        <div class="download-item">
-            <span>assets/hero-bg.png</span>
-            <a href="assets/hero-bg.png" download class="download-button">ダウンロード</a>
+            <span>hero-bg.png</span>
+            <a href="/lovable-uploads/5033d188-8ff7-40bd-a808-a8aecc24cdd6.png" download="hero-bg.png" class="download-button">ダウンロード</a>
         </div>
     </div>
 </body>
