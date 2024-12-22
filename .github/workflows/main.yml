@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # mainブランチにpushされたときに実行
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3  # ソースコードをチェックアウト
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Node.js のバージョンを指定
+
+      - name: Install dependencies
+        run: npm install  # 必要なライブラリをインストール
+
+      - name: Build
+        run: npm run build  # ビルド (Vite の場合)
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # GitHub Pages にデプロイ
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # ビルド結果を dist フォルダに格納
