@@ -5,33 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CORE E-SPORTS</title>
   <meta name="description" content="CORE E-Sportsはゲームプレイヤーのための最高品質を追求します" />
-  <meta name="author" content="CORE E-Sports" />
 
-  <!-- ▼ OGPタグ (DiscordやTwitterなどが参照) -->
+  <!-- 
+    ▼ OGPタグ (Discord, LINE, Slack, LinkedIn, Facebookなどが参照)
+    今回は LinkedIn も og:image を見るため、
+    1200×628 サイズの画像を og:image に指定しています。
+  -->
   <meta property="og:title" content="CORE E-SPORTS" />
   <meta property="og:description" content="ゲームプレイヤーのための最高品質を追求します" />
-  <meta property="og:image" content="https://core-gg.com/core-gg-ogp-1200x630.png" />
+  <meta property="og:image" content="https://core-gg.com/core-esports-twitter-1200x628.png" />
   <meta property="og:url" content="https://core-gg.com" />
   <meta property="og:type" content="website" />
 
-  <!-- ▼ Twitterカードにも対応したければ (任意) 
+  <!-- 
+    ▼ Twitterカード設定
+    Twitterは name="twitter:image" を参照。 
+    ここでも同じ 1200×628 を指定。 
+  -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CORE E-SPORTS" />
   <meta name="twitter:description" content="ゲームプレイヤーのための最高品質を追求します" />
-  <meta name="twitter:image" content="https://core-gg.com/core-gg-ogp-1200x630.png" />
-  -->
+  <meta name="twitter:image" content="https://core-gg.com/core-esports-twitter-1200x628.png" />
 
-  <!-- ▼ favicon (タブアイコン) -->
+  <!-- 
+    ▼ favicon (タブアイコン)
+    こちらはブラウザのタブで表示されるアイコン。OGPとは無関係です。
+  -->
   <link rel="icon" href="/favicon.png" type="image/png" />
 
-  <!-- ▼ 以下、もしViteの自動ビルドに合わせるなら「ハッシュ付きのファイル」は削除 or コメントアウト -->
-  <!-- 例：<script type="module" crossorigin src="/assets/index-xxxx.js"></script> は消す -->
-
-  <!-- ▼ Vite等のエントリーポイント (Reactなら src/main.tsx など) -->
+  <!-- 
+    ▼ ViteやReactを使っている場合のエントリーポイント (例: /src/main.tsx)
+    ハッシュ付きのJSファイルを手動で指定しているなら削除 or コメントアウト。
+  -->
   <script type="module" src="/src/main.tsx"></script>
 
-  <!-- ▼ 必要があればCDNスクリプトを追加
-  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  <!-- 
+    ▼ 必要ならCDNスクリプト等をここに追加
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   -->
 </head>
 <body>
