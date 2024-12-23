@@ -7,27 +7,30 @@
   <meta name="description" content="CORE E-Sportsはゲームプレイヤーのための最高品質を追求します" />
   <meta name="author" content="CORE E-Sports" />
 
-  <!-- ▼ OGP画像（例） ▼
-       もしSNSにシェアした時にプレビュー画像を表示したい場合は、絶対URLで書くのが確実です
-  <meta property="og:image" content="https://core-gg.com/og-image.png" />
+  <!-- ▼ OGPタグ (DiscordやTwitterなどが参照) -->
+  <meta property="og:title" content="CORE E-SPORTS" />
+  <meta property="og:description" content="ゲームプレイヤーのための最高品質を追求します" />
+  <meta property="og:image" content="https://core-gg.com/core-gg-ogp-1200x630.png" />
+  <meta property="og:url" content="https://core-gg.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- ▼ Twitterカードにも対応したければ (任意) 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CORE E-SPORTS" />
+  <meta name="twitter:description" content="ゲームプレイヤーのための最高品質を追求します" />
+  <meta name="twitter:image" content="https://core-gg.com/core-gg-ogp-1200x630.png" />
   -->
 
-  <!-- ▼ favicon.png を読み込む ▼ -->
+  <!-- ▼ favicon (タブアイコン) -->
   <link rel="icon" href="/favicon.png" type="image/png" />
-  <!-- もし .ico があったらコメントアウトしておく -->
-  <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon" /> -->
 
-  <!-- ▼ 以下、ハッシュ付きファイルの参照は削除 or コメントアウト ▼
-  <script type="module" crossorigin src="/assets/index-DKuZ6D99.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/vendor-DI1rgoR6.js">
-  <link rel="modulepreload" crossorigin href="/assets/ui-x9WL2l9Fm.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-EFx364b7.css">
-  -->
+  <!-- ▼ 以下、もしViteの自動ビルドに合わせるなら「ハッシュ付きのファイル」は削除 or コメントアウト -->
+  <!-- 例：<script type="module" crossorigin src="/assets/index-xxxx.js"></script> は消す -->
 
-  <!-- ▼ Vite標準のエントリーポイントを指定（例：src/main.tsx がReactの入口） -->
+  <!-- ▼ Vite等のエントリーポイント (Reactなら src/main.tsx など) -->
   <script type="module" src="/src/main.tsx"></script>
 
-  <!-- ▼ CDNのスクリプトを使うなら下記を残す or 書き足す
+  <!-- ▼ 必要があればCDNスクリプトを追加
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   -->
 </head>
