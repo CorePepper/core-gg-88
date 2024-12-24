@@ -22,14 +22,26 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
     review.name === "【αD Aves】 ひよ"
   );
 
+  // Emperor-specific text variations
+  const emperorTextMobile = 
+    "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！Coreサック最高！";
+
+  const emperorTextPC = 
+    "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと\n" +
+    "滑りが良いし解決する！\n" +
+    "Coreサック最高！";
+
+  // Determine which text to display
+  const textToDisplay = isEmperor
+    ? (isMobile ? emperorTextMobile : emperorTextPC)
+    : review.text;
+
   if (isEmperor) {
     return (
       <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col justify-between">
-        {/* Emperor specific layout - Title at top with increased spacing */}
         <div className="flex flex-col items-center">
           <h2 className="text-gold font-semibold text-xl lg:text-4xl mb-4 lg:mb-8 text-center">{review.name}</h2>
           
-          {/* Centered image with increased spacing and sizing */}
           <div className="flex justify-center mb-4 lg:mb-8 w-full lg:mt-6">
             {review.secondImage && (
               <img
@@ -40,7 +52,6 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
             )}
           </div>
 
-          {/* Stars centered below image with increased spacing */}
           <div className="flex justify-center mb-4 lg:mt-8 lg:mb-10">
             {[...Array(review.rating)].map((_, i) => (
               <Star
@@ -51,9 +62,8 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
           </div>
         </div>
 
-        {/* Updated text with larger size and bottom positioning */}
-        <p className="text-white/80 text-base lg:text-2xl text-center mt-auto lg:mt-4">
-          風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！Coreサック最高！
+        <p className="text-white/80 text-base lg:text-base text-center mt-auto whitespace-pre-line">
+          {textToDisplay}
         </p>
       </div>
     );
