@@ -57,41 +57,39 @@ const reviews: Review[] = [
 const ReviewItem = ({ review }: { review: Review }) => {
   return (
     <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
-      <div className="flex flex-col sm:flex-row gap-4 items-start flex-grow">
-        <div className="flex-1">
-          <div className="flex flex-row items-center justify-between mb-4">
-            <div className="flex">
-              {[...Array(review.rating)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 text-gold fill-current"
-                />
-              ))}
-            </div>
+      <div className="flex-1 flex flex-col h-full">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex">
+            {[...Array(review.rating)].map((_, i) => (
+              <Star
+                key={i}
+                className="w-5 h-5 text-gold fill-current"
+              />
+            ))}
           </div>
-          <div className="flex flex-row items-start justify-between h-full">
-            <div className="flex flex-col justify-between h-full">
-              <p className="text-white/80 mb-4">{review.text}</p>
-              <p className="text-gold font-semibold text-xl mt-auto">{review.name}</p>
-            </div>
-            {review.secondImage && (
-              <div className="w-1/3 ml-4 flex-shrink-0">
-                <img
-                  src={review.secondImage}
-                  alt="Additional review image"
-                  className={`w-full h-auto rounded-lg object-cover transform ${
-                    review.name === "【αD Aves らいむ】" ? "scale-[1.75]" : ""
-                  } ${
-                    review.name === "【αD Aves べてぃ】" ? "scale-[1.75]" : ""
-                  } ${
-                    review.name === "【αD Aves】 ひよ" ? "scale-[1.75]" : ""
-                  } ${
-                    review.name === "【αD Aves】 たけし" ? "scale-[1.75]" : ""
-                  }`}
-                />
-              </div>
-            )}
+        </div>
+        <div className="flex flex-row items-start justify-between flex-1">
+          <div className="flex flex-col justify-between h-full flex-1">
+            <p className="text-white/80 mb-4">{review.text}</p>
+            <p className="text-gold font-semibold text-xl mt-auto">{review.name}</p>
           </div>
+          {review.secondImage && (
+            <div className="w-1/3 ml-4 flex-shrink-0">
+              <img
+                src={review.secondImage}
+                alt="Additional review image"
+                className={`w-full h-auto rounded-lg object-cover transform ${
+                  review.name === "【αD Aves らいむ】" ? "scale-[1.75]" : ""
+                } ${
+                  review.name === "【αD Aves べてぃ】" ? "scale-[1.75]" : ""
+                } ${
+                  review.name === "【αD Aves】 ひよ" ? "scale-[1.75]" : ""
+                } ${
+                  review.name === "【αD Aves】 たけし" ? "scale-[1.75]" : ""
+                }`}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
