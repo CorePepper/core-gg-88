@@ -63,7 +63,7 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
-    name: "プロゲーマーI",
+    name: "ゲーム",
     rating: 5,
     text: "細部まで考え抜かれた設計で、プレイヤーの要望に完璧に応えてくれる製品です。",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
