@@ -163,8 +163,13 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            <div className="w-full mt-4">
-              {takeshiReview && <ReviewItem review={takeshiReview} />}
+            {/* Add proper container for Takeshi's review card */}
+            <div className="relative w-full bg-transparent flex flex-col">
+              {takeshiReview && (
+                <div className="w-full">
+                  <ReviewItem review={takeshiReview} />
+                </div>
+              )}
             </div>
           </div>
         </div>
