@@ -76,7 +76,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-row items-start justify-between flex-grow">
+      <div className="flex flex-row items-center justify-between flex-grow">
         <div className="flex flex-col justify-between h-full flex-grow">
           <p className="text-white/80 mb-4">{review.text}</p>
           <p className="text-gold font-semibold text-xl">{review.name}</p>
