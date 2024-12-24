@@ -141,7 +141,7 @@ const Reviews = () => {
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
           <ReviewList reviews={reviews} />
           
-          <div className="lg:w-1/3 flex flex-col items-center gap-8">
+          <div className="lg:w-1/3 flex flex-col items-stretch gap-8">
             <img
               src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
               alt="Delta Gaming Premium"
