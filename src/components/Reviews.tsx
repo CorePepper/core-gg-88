@@ -65,6 +65,50 @@ const Reviews = () => {
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
+          <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg">
+            <div className="flex items-center space-x-4">
+              <img
+                src="/lovable-uploads/81ce5d7c-84fc-4ec3-a921-a993f06bb5ae.png"
+                alt="わずぼーん"
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-gold">わずぼーん</h3>
+                <p className="text-white/80">タッチ感度が上がって上達なプレイができる。耐久性も凄くて気に入ってる！</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg">
+            <div className="flex items-center space-x-4">
+              <img
+                src="/lovable-uploads/９ (1).png"
+                alt="【αD Aves べてぃ】"
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-gold">【αD Aves べてぃ】</h3>
+                <p className="text-white/80">毛玉が出ないのと、長持ちするためコスパが良い！</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg">
+            <div className="flex items-center space-x-4">
+              <img
+                src="/lovable-uploads/81ce5d7c-84fc-4ec3-a921-a993f06bb5ae.png"
+                alt="プロゲーマーD"
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-gold">プロゲーマーD</h3>
+                <p className="text-white/80">他の製品と比較しても、反応速度と操作性が群を抜いています。ゲーム全体でCore製品を採用しています。</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
