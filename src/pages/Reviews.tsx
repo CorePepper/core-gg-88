@@ -85,18 +85,18 @@ const Reviews = () => {
     secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   };
 
-  // Reorder reviews for mobile
+  // Filter and reorder reviews for mobile
   const getOrderedReviews = () => {
-    if (!isMobile) return reviews;
-
-    let mobileReviews = [...reviews];
+    let filteredReviews = [...reviews];
     
-    // Find and remove わずぼーん
-    const wazIndex = mobileReviews.findIndex(r => r.name === "わずぼーん");
-    const wazItem = mobileReviews.splice(wazIndex, 1)[0];
+    if (isMobile) {
+      // For mobile: Add emperor at the start, keep わずぼーん second
+      const wazIndex = filteredReviews.findIndex(r => r.name === "わずぼーん");
+      const wazItem = filteredReviews.splice(wazIndex, 1)[0];
+      return [emperorReview, wazItem, ...filteredReviews];
+    }
     
-    // Create new array with emperor first, then わずぼーん, then the rest
-    return [emperorReview, wazItem, ...mobileReviews];
+    return filteredReviews;
   };
 
   return (
@@ -145,7 +145,7 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            <ReviewItem review={emperorReview} />
+            {!isMobile && <ReviewItem review={emperorReview} />}
           </div>
         </div>
 
