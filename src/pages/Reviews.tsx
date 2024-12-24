@@ -101,13 +101,9 @@ const ReviewItem = ({ review }: { review: Review }) => {
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
-      {reviews.slice(0, 5).map((review, index) => (
+      {reviews.map((review, index) => (
         <ReviewItem key={index} review={review} />
       ))}
-      <div className="flex flex-col gap-8">
-        <ReviewItem review={reviews[5]} />
-        <ReviewItem review={reviews[6]} />
-      </div>
     </div>
   );
 };
