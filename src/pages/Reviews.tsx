@@ -17,16 +17,16 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
-    name: "【αD Aves らいむ】",
-    rating: 5,
-    text: "破れないし色々な面からみても長持ちします、ちょうどいい感じで滑って最高です。",
-    secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
-  },
-  {
     name: "【αD Aves べてぃ】",
     rating: 5,
     text: "毛玉が出ないのと、長持ちするためコスパが良い！",
     secondImage: "/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
+  },
+  {
+    name: "【αD Aves らいむ】",
+    rating: 5,
+    text: "破れないし色々な面からみても長持ちします、ちょうどいい感じで滑って最高です。",
+    secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
   },
   {
     name: "【αD Aves】 ひよ",
