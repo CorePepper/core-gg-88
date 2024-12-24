@@ -68,7 +68,7 @@ const Reviews = () => {
               </div>
               <div className="w-1/3 ml-4 flex-shrink-0">
                 <img
-                  src="/lovable-uploads/364a0773-ee13-4f0f-abd1-b119f4fdb2bf.png"
+                  src="/lovable-uploads/db555773-db4c-4513-85d0-ab08f8e4c5d9.png"
                   alt="【αD Aves べてぃ】"
                   className="w-full h-auto rounded-lg object-cover"
                 />
