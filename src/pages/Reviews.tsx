@@ -26,7 +26,7 @@ const reviews: Review[] = [
     name: "【αD Aves べてぃ】",
     rating: 5,
     text: "毛玉が出ないのと、長持ちするためコスパが良い！",
-    secondImage: "/lovable-uploads/3ae79919-fa89-4497-93be-6b7799b431c1.png"
+    secondImage: "/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
   },
   {
     name: "プロゲーマーD",
