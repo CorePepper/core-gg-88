@@ -99,19 +99,24 @@ const ReviewItem = ({ review }: { review: Review }) => {
 };
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
-  // Filter reviews to create the desired layout
-  const mainReviews = reviews.slice(0, 5);
-  const proGamerReview = reviews[5];
-  const takeshiReview = reviews[6];
+  // Split reviews into vertical and horizontal sections
+  const verticalReviews = reviews.slice(0, 4);
+  const horizontalReviews = reviews.slice(4);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
-      {mainReviews.map((review, index) => (
-        <ReviewItem key={index} review={review} />
-      ))}
-      <div className="space-y-8">
-        <ReviewItem review={proGamerReview} />
-        <ReviewItem review={takeshiReview} />
+    <div className="lg:w-2/3">
+      {/* Vertical layout for first 4 reviews */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        {verticalReviews.map((review, index) => (
+          <ReviewItem key={index} review={review} />
+        ))}
+      </div>
+      
+      {/* Horizontal layout for remaining reviews */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {horizontalReviews.map((review, index) => (
+          <ReviewItem key={index} review={review} />
+        ))}
       </div>
     </div>
   );
