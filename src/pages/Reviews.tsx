@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { ReviewList } from "@/components/review/ReviewList";
 import { ReviewItem } from "@/components/review/ReviewItem";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Review {
   name: string;
@@ -71,6 +72,7 @@ const reviews: Review[] = [
 
 const Reviews = () => {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -81,6 +83,20 @@ const Reviews = () => {
     rating: 5,
     text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決。Coreサック最高！",
     secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
+  };
+
+  // Reorder reviews for mobile
+  const getOrderedReviews = () => {
+    if (!isMobile) return reviews;
+
+    let mobileReviews = [...reviews];
+    
+    // Find and remove わずぼーん
+    const wazIndex = mobileReviews.findIndex(r => r.name === "わずぼーん");
+    const wazItem = mobileReviews.splice(wazIndex, 1)[0];
+    
+    // Create new array with emperor first, then わずぼーん, then the rest
+    return [emperorReview, wazItem, ...mobileReviews];
   };
 
   return (
@@ -101,7 +117,7 @@ const Reviews = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
-          <ReviewList reviews={reviews} />
+          <ReviewList reviews={getOrderedReviews()} />
           
           <div className="lg:w-1/3 flex flex-col items-stretch gap-8">
             <img
