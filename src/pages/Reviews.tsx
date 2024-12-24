@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { ReviewList } from "@/components/review/ReviewList";
 import { ReviewItem } from "@/components/review/ReviewItem";
 
@@ -70,6 +71,11 @@ const reviews: Review[] = [
 
 const Reviews = () => {
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const emperorReview = {
     name: "SG/αD 皇帝",
     rating: 5,
