@@ -45,12 +45,18 @@ const reviews: Review[] = [
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+  },
+  {
+    name: "【αD Aves】 たけし",
+    rating: 5,
+    text: "操作性が抜群で反応も素晴らしいです。普段使いにも最適で、プロのプレイヤーにもおすすめできます！",
+    secondImage: "/lovable-uploads/pro_player_new_icon.png"
   }
 ];
 
 const ReviewItem = ({ review }: { review: Review }) => {
   return (
-    <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+    <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full">
       <div className="flex flex-col sm:flex-row gap-4 items-center">
         <div className="flex-1">
           <div className="flex flex-row items-center justify-between mb-4">
@@ -79,6 +85,8 @@ const ReviewItem = ({ review }: { review: Review }) => {
                     review.name === "【αD Aves べてぃ】" ? "scale-[1.75]" : ""
                   } ${
                     review.name === "【αD Aves】 ひよ" ? "scale-[1.75]" : ""
+                  } ${
+                    review.name === "【αD Aves】 たけし" ? "scale-[1.75]" : ""
                   }`}
                 />
               </div>
