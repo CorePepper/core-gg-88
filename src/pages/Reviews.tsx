@@ -56,9 +56,11 @@ const reviews: Review[] = [
 
 const ReviewItem = ({ review }: { review: Review }) => {
   const isTakeshi = review.name === "【αD Aves】 たけし";
-  const isSpecialCard = review.name === "【αD Aves らいむ】" || 
-                       review.name === "【αD Aves べてぃ】" || 
-                       review.name === "【αD Aves】 ひよ";
+  const isSpecialCard = !isTakeshi && (
+    review.name === "【αD Aves らいむ】" || 
+    review.name === "【αD Aves べてぃ】" || 
+    review.name === "【αD Aves】 ひよ"
+  );
 
   return (
     <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
@@ -163,13 +165,8 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            {/* Add proper container for Takeshi's review card */}
-            <div className="relative w-full bg-transparent flex flex-col">
-              {takeshiReview && (
-                <div className="w-full">
-                  <ReviewItem review={takeshiReview} />
-                </div>
-              )}
+            <div className="w-full">
+              {takeshiReview && <ReviewItem review={takeshiReview} />}
             </div>
           </div>
         </div>
