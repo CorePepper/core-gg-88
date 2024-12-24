@@ -8,7 +8,7 @@
 
   <!-- 
     ▼ OGPタグ (Discord, LINE, Slack, LinkedIn, Facebook など)
-       1200×628 画像を設定している例
+       1200×628 画像を参照する例
   -->
   <meta property="og:title" content="CORE E-SPORTS" />
   <meta property="og:description" content="ゲームプレイヤーのための最高品質を追求します" />
@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
 
   <!-- 
-    ▼ Twitterカード (summary_large_image)
+    ▼ Twitterカード設定（summary_large_image 形式）
        同じ 1200×628 の画像を指定
   -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -35,21 +35,22 @@
   <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
 
-  <!--
-    ▼ もしVite/Reactのエントリポイントを使うなら、
-       必要に応じて下の <script> をアンコメントしてください。
+  <!-- 
+    ▼ Vite/Reactなどを使う場合のエントリーポイント例 (src/main.tsx)
+    使うならコメントを外し、プロジェクト構成に合わせてください。
 
     <script type="module" src="/src/main.tsx"></script>
   -->
 
-  <!--
-    ▼ gh-pagesで使われていたビルド後ファイルへの参照は削除 or コメントアウト
+  <!-- 
+    ▼ 以前gh-pagesで使われていた「ビルド済みファイル」の呼び出しはコメントアウト
+    ▼ ViteのActionsビルドとは競合する恐れがあるため、通常は不要です。
+
     <script type="module" crossorigin src="/assets/index-BX53_e0.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-Dl1qrrOg.js" />
     <link rel="modulepreload" crossorigin href="/assets/ui-x9W2Lm9.js" />
     <link rel="stylesheet" crossorigin href="/assets/index-EfX364b7.css" />
   -->
-
 </head>
 <body>
   <div id="root"></div>
