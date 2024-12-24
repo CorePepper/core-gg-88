@@ -76,7 +76,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-row items-center justify-between flex-grow">
+      <div className="flex flex-row items-start justify-between flex-grow">
         <div className="flex flex-col justify-between h-full flex-grow">
           <p className="text-white/80 mb-4">{review.text}</p>
           <p className="text-gold font-semibold text-xl">{review.name}</p>
@@ -86,7 +86,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
             <img
               src={review.secondImage}
               alt={review.name}
-              className={`w-full h-auto rounded-lg object-cover transform ${
+              className={`w-full h-auto rounded-lg object-cover ${
                 isSpecialCard ? "scale-[1.75]" : ""
               }`}
             />
@@ -166,9 +166,6 @@ const Reviews = () => {
                 購入者の声 を検索
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
-            </div>
-            <div className="w-full h-full">
-              {takeshiReview && <ReviewItem review={takeshiReview} />}
             </div>
           </div>
         </div>
