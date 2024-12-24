@@ -73,7 +73,7 @@ const Reviews = () => {
   const emperorReview = {
     name: "SG/αD 皇帝",
     rating: 5,
-    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
+    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決。",
     secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   };
 

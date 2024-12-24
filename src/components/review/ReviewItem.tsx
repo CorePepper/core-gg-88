@@ -53,7 +53,7 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
 
         {/* Updated text with larger size and bottom positioning */}
         <p className="text-white/80 text-base lg:text-2xl text-center mt-auto lg:mt-4">
-          風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！Coreサック最高！
+          風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決。Coreサック最高！
         </p>
       </div>
     );
