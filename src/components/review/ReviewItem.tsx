@@ -28,7 +28,7 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
         <div className="flex flex-col items-center">
           <h2 className="text-gold font-semibold text-xl lg:text-4xl mb-4 lg:mb-8 text-center">{review.name}</h2>
           
-          <div className="flex justify-center mb-2 lg:mb-4 w-full lg:mt-6">
+          <div className="flex justify-center mb-4 lg:mb-8 w-full lg:mt-6">
             {review.secondImage && (
               <img
                 src={review.secondImage}
@@ -38,7 +38,7 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
             )}
           </div>
 
-          <div className="flex justify-center mt-4 mb-6 lg:mt-6 lg:mb-8">
+          <div className="flex justify-center mt-2 mb-6 lg:mt-4 lg:mb-10">
             {[...Array(review.rating)].map((_, i) => (
               <Star
                 key={i}
@@ -48,7 +48,7 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
           </div>
         </div>
 
-        <p className="text-white/80 text-base lg:text-2xl text-center mt-auto lg:mt-4 relative -top-2">
+        <p className="text-white/80 text-base lg:text-2xl text-center mt-auto lg:mt-4 relative">
           風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決。Coreサック最高！
         </p>
       </div>
