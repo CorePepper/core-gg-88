@@ -35,6 +35,18 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
   },
   {
+    name: "【αD Aves】 たけし",
+    rating: 5,
+    text: "操作性が抜群で反応も素晴らしいです。普段使いにも最適で、プロのプレイヤーにもおすすめできます！",
+    secondImage: "/lovable-uploads/pro_player_new_icon.png"
+  },
+  {
+    name: "SG/αD 皇帝",
+    rating: 5,
+    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
+    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
+  },
+  {
     name: "プロゲーマーF",
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
@@ -151,14 +163,6 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            <ReviewItem 
-              review={{
-                name: "SG/αD 皇帝",
-                rating: 5,
-                text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
-                secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
-              }} 
-            />
           </div>
         </div>
 
