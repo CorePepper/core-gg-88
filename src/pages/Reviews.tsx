@@ -56,8 +56,8 @@ const reviews: Review[] = [
 
 const ReviewItem = ({ review }: { review: Review }) => {
   return (
-    <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full">
-      <div className="flex flex-col sm:flex-row gap-4 items-center">
+    <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+      <div className="flex flex-col sm:flex-row gap-4 items-start flex-grow">
         <div className="flex-1">
           <div className="flex flex-row items-center justify-between mb-4">
             <div className="flex">
@@ -69,10 +69,10 @@ const ReviewItem = ({ review }: { review: Review }) => {
               ))}
             </div>
           </div>
-          <div className="flex flex-row items-center justify-between">
-            <div>
+          <div className="flex flex-row items-start justify-between h-full">
+            <div className="flex flex-col justify-between h-full">
               <p className="text-white/80 mb-4">{review.text}</p>
-              <p className="text-gold font-semibold text-xl">{review.name}</p>
+              <p className="text-gold font-semibold text-xl mt-auto">{review.name}</p>
             </div>
             {review.secondImage && (
               <div className="w-1/3 ml-4 flex-shrink-0">
@@ -101,7 +101,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   // Split reviews into vertical and horizontal sections
   const verticalReviews = reviews.slice(0, 4);
-  const horizontalReviews = reviews.slice(4);
+  const horizontalReviews = [reviews[4], reviews[5], reviews[6]]; // Explicitly order the horizontal reviews
 
   return (
     <div className="lg:w-2/3">
