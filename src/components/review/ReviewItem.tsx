@@ -38,7 +38,7 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
             )}
           </div>
 
-          <div className="flex justify-center mt-2 mb-6 lg:mt-4 lg:mb-10">
+          <div className="flex justify-center mb-4 lg:mt-8 lg:mb-10">
             {[...Array(review.rating)].map((_, i) => (
               <Star
                 key={i}
@@ -48,7 +48,7 @@ export const ReviewItem = ({ review }: ReviewItemProps) => {
           </div>
         </div>
 
-        <p className="text-white/80 text-base lg:text-2xl text-center mt-auto lg:mt-4 relative">
+        <p className="text-white/80 text-base lg:text-2xl text-center mt-auto lg:mt-4 relative -top-2">
           風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決。Coreサック最高！
         </p>
       </div>
