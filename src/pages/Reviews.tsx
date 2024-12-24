@@ -51,7 +51,7 @@ const reviews: Review[] = [
 const ReviewItem = ({ review }: { review: Review }) => {
   return (
     <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300">
-      <div className="flex flex-col sm:flex-row gap-4 items-start">
+      <div className="flex flex-col sm:flex-row gap-4 items-center">
         <div className="flex-1">
           <div className="flex flex-row items-center justify-between mb-4">
             <div className="flex">
@@ -77,6 +77,8 @@ const ReviewItem = ({ review }: { review: Review }) => {
                     review.name === "【αD Aves らいむ】" ? "scale-[1.75]" : ""
                   } ${
                     review.name === "【αD Aves べてぃ】" ? "scale-[1.75]" : ""
+                  } ${
+                    review.name === "【αD Aves】 ひよ" ? "scale-[1.75]" : ""
                   }`}
                 />
               </div>
