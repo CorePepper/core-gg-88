@@ -95,8 +95,10 @@ const ReviewItem = ({ review }: { review: Review }) => {
 };
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
+  // First 4 reviews for the 2-column layout
   const verticalReviews = reviews.slice(0, 4);
-  const horizontalReviews = reviews.slice(4);
+  // Next 2 reviews for the horizontal layout (excluding たけし)
+  const horizontalReviews = reviews.slice(4, 6);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
@@ -104,7 +106,7 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
         <ReviewItem key={index} review={review} />
       ))}
       <div className="md:col-span-2">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {horizontalReviews.map((review, index) => (
             <ReviewItem key={index} review={review} />
           ))}
@@ -114,25 +116,9 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   );
 };
 
-const ReviewStats = () => {
-  return (
-    <div className="mt-12 text-center space-y-4">
-      <div className="inline-flex items-center justify-center space-x-8">
-        <div className="text-white">
-          <span className="text-gold text-4xl font-bold block">30万個</span>
-          <span className="text-sm">累計販売数突破</span>
-        </div>
-        <div className="text-white">
-          <span className="text-gold text-4xl font-bold block">1位</span>
-          <span className="text-sm">Amazonベストセラー</span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Reviews = () => {
   const navigate = useNavigate();
+  const takeshiReview = reviews.find(r => r.name === "【αD Aves】 たけし");
 
   return (
     <div className="min-h-screen bg-navy">
@@ -180,10 +166,25 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
+            {/* Add たけし's review card in the red area */}
+            <div className="w-full mt-4">
+              {takeshiReview && <ReviewItem review={takeshiReview} />}
+            </div>
           </div>
         </div>
 
-        <ReviewStats />
+        <div className="mt-12 text-center space-y-4">
+          <div className="inline-flex items-center justify-center space-x-8">
+            <div className="text-white">
+              <span className="text-gold text-4xl font-bold block">30万個</span>
+              <span className="text-sm">累計販売数突破</span>
+            </div>
+            <div className="text-white">
+              <span className="text-gold text-4xl font-bold block">1位</span>
+              <span className="text-sm">Amazonベストセラー</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
