@@ -29,10 +29,10 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
   },
   {
-    name: "プロゲーマーD",
+    name: "【αD Aves らいむ】",
     rating: 5,
-    text: "他の製品と比較しても、反応速度と操作性が群を抜いています。チーム全体でCore製品を採用しています。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    text: "破れないし色々な面からみても長持ちします、ちょうどいい感じで滑って最高です。",
+    secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
   },
   {
     name: "eスポーツ選手E",
