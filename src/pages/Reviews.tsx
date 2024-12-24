@@ -99,26 +99,11 @@ const ReviewItem = ({ review }: { review: Review }) => {
 };
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
-  // First 4 reviews in 2 columns
-  const firstFourReviews = reviews.slice(0, 4);
-  // Remaining reviews in horizontal layout
-  const remainingReviews = reviews.slice(4);
-
   return (
-    <div className="flex flex-col gap-8 lg:w-2/3">
-      {/* First two columns */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {firstFourReviews.map((review, index) => (
-          <ReviewItem key={index} review={review} />
-        ))}
-      </div>
-      
-      {/* Horizontal layout for remaining reviews */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {remainingReviews.map((review, index) => (
-          <ReviewItem key={index + 4} review={review} />
-        ))}
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
+      {reviews.map((review, index) => (
+        <ReviewItem key={index} review={review} />
+      ))}
     </div>
   );
 };
