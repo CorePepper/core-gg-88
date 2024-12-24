@@ -75,6 +75,8 @@ const ReviewItem = ({ review }: { review: Review }) => {
                   alt="Additional review image"
                   className={`w-full h-auto rounded-lg object-cover ${
                     review.name === "【αD Aves らいむ】" ? "scale-175" : ""
+                  } ${
+                    review.name === "【αD Aves べてぃ】" ? "scale-150" : ""
                   }`}
                 />
               </div>
