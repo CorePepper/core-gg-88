@@ -63,7 +63,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
               ))}
             </div>
           </div>
-          <div className="flex flex-row items-start justify-between">
+          <div className="flex flex-row items-center justify-between">
             <div>
               <p className="text-white/80 mb-4">{review.text}</p>
               <p className="text-gold font-semibold text-xl">{review.name}</p>
