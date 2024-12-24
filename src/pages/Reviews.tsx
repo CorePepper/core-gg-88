@@ -23,10 +23,10 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   },
   {
-    name: "ストリーマーC",
+    name: "【αD Aves べてぃ】",
     rating: 5,
-    text: "配信中も快適に使用でき、視聴者からも好評です。耐久性も抜群で、長期間安心して使えます。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    text: "毛玉が出ないのと、長持ちするためコスパが良い！",
+    secondImage: "/lovable-uploads/3ae79919-fa89-4497-93be-6b7799b431c1.png"
   },
   {
     name: "プロゲーマーD",
