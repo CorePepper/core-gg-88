@@ -55,8 +55,11 @@ const reviews: Review[] = [
 ];
 
 const ReviewItem = ({ review }: { review: Review }) => {
+  const isTakeshi = review.name === "【αD Aves】 たけし";
+  const customClass = isTakeshi ? "min-h-0 p-4" : "p-6"; // Reduce padding for Takeshi's card
+
   return (
-    <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+    <div className={`bg-navy-light/80 backdrop-blur-sm rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${customClass}`}>
       <div className="flex flex-row items-center justify-between mb-4">
         <div className="flex">
           {[...Array(review.rating)].map((_, i) => (
@@ -69,7 +72,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
       </div>
       <div className="flex flex-row items-center justify-between flex-grow">
         <div className="flex flex-col justify-between h-full flex-grow">
-          <p className="text-white/80 mb-4">{review.text}</p>
+          <p className={`text-white/80 ${isTakeshi ? 'mb-2' : 'mb-4'}`}>{review.text}</p>
           <p className="text-gold font-semibold text-xl">{review.name}</p>
         </div>
         {review.secondImage && (
@@ -95,9 +98,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 };
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
-  // First 4 reviews for the 2-column layout
   const verticalReviews = reviews.slice(0, 4);
-  // Next 2 reviews for the horizontal layout (excluding たけし)
   const horizontalReviews = reviews.slice(4, 6);
 
   return (
@@ -106,7 +107,7 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
         <ReviewItem key={index} review={review} />
       ))}
       <div className="md:col-span-2">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {horizontalReviews.map((review, index) => (
             <ReviewItem key={index} review={review} />
           ))}
