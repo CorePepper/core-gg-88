@@ -17,16 +17,22 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
-    name: "【αD Aves らいむ】",
+    name: "SG/αD 皇帝",
     rating: 5,
-    text: "破れないし色々な面からみても長持ちします、ちょうどいい感じで滑って最高です。",
-    secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
+    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
+    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   },
   {
     name: "【αD Aves べてぃ】",
     rating: 5,
     text: "毛玉が出ないのと、長持ちするためコスパが良い！",
     secondImage: "/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
+  },
+  {
+    name: "【αD Aves らいむ】",
+    rating: 5,
+    text: "破れないし色々な面からみても長持ちします、ちょうどいい感じで滑って最高です。",
+    secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
   },
   {
     name: "【αD Aves】 ひよ",
@@ -39,14 +45,23 @@ const reviews: Review[] = [
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+  },
+  {
+    name: "【αD Aves】 たけし",
+    rating: 5,
+    text: "操作性が抜群で反応も素晴らしいです。普段使いにも最適で、プロのプレイヤーにもおすすめできます！",
+    secondImage: "/lovable-uploads/pro_player_new_icon.png"
   }
 ];
 
 const ReviewItem = ({ review }: { review: Review }) => {
   const isSpecialCard = (
-    review.name === "【αD Aves らいむ】" || 
-    review.name === "【αD Aves べてぃ】" || 
-    review.name === "【αD Aves】 ひよ"
+    review.name !== "【αD Aves】 たけし" &&
+    (
+      review.name === "【αD Aves らいむ】" || 
+      review.name === "【αD Aves べてぃ】" || 
+      review.name === "【αD Aves】 ひよ"
+    )
   );
 
   return (
@@ -71,7 +86,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
             <img
               src={review.secondImage}
               alt={review.name}
-              className={`w-full h-auto rounded-lg object-cover transform ${
+              className={`w-full h-auto rounded-lg object-cover ${
                 isSpecialCard ? "scale-[1.75]" : ""
               }`}
             />
@@ -84,7 +99,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   const verticalReviews = reviews.slice(0, 4);
-  const horizontalReviews = reviews.slice(4, 5);
+  const horizontalReviews = reviews.slice(4, 6);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
@@ -104,12 +119,7 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
 
 const Reviews = () => {
   const navigate = useNavigate();
-  const emperorReview = {
-    name: "SG/αD 皇帝",
-    rating: 5,
-    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
-    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
-  };
+  const takeshiReview = reviews.find(r => r.name === "【αD Aves】 たけし");
 
   return (
     <div className="min-h-screen bg-navy">
@@ -157,7 +167,7 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            <ReviewItem review={emperorReview} />
+            {takeshiReview && <ReviewItem review={takeshiReview} />}
           </div>
         </div>
 
