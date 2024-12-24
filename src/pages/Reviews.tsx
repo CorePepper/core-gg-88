@@ -86,7 +86,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
             <img
               src={review.secondImage}
               alt={review.name}
-              className={`w-full h-auto rounded-lg object-cover ${
+              className={`w-full h-auto rounded-lg object-cover transform ${
                 isSpecialCard ? "scale-[1.75]" : ""
               }`}
             />
@@ -166,6 +166,9 @@ const Reviews = () => {
                 購入者の声 を検索
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
+            </div>
+            <div className="w-full h-full">
+              {takeshiReview && <ReviewItem review={takeshiReview} />}
             </div>
           </div>
         </div>
