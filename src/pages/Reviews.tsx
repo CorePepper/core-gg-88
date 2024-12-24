@@ -45,6 +45,24 @@ const reviews: Review[] = [
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+  },
+  {
+    name: "プロゲーマーG",
+    rating: 5,
+    text: "長時間のプレイでも快適な使用感が続き、パフォーマンスの向上を実感できます。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+  },
+  {
+    name: "プロゲーマーH",
+    rating: 5,
+    text: "他の製品と比較しても耐久性が段違いです。コスパも考えると間違いなく最高の選択です。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+  },
+  {
+    name: "プロゲーマーI",
+    rating: 5,
+    text: "細部まで考え抜かれた設計で、プレイヤーの要望に完璧に応えてくれる製品です。",
+    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   }
 ];
 
@@ -91,6 +109,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   const verticalReviews = reviews.slice(0, 4);
   const horizontalReviews = reviews.slice(4, 6);
+  const row4Reviews = reviews.slice(6, 9);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
@@ -100,6 +119,13 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
       <div className="md:col-span-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {horizontalReviews.map((review, index) => (
+            <ReviewItem key={index} review={review} />
+          ))}
+        </div>
+      </div>
+      <div className="md:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          {row4Reviews.map((review, index) => (
             <ReviewItem key={index} review={review} />
           ))}
         </div>
