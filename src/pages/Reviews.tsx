@@ -45,6 +45,12 @@ const reviews: Review[] = [
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+  },
+  {
+    name: "SG/αD 皇帝",
+    rating: 5,
+    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
+    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   }
 ];
 
@@ -90,7 +96,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   const verticalReviews = reviews.slice(0, 4);
-  const horizontalReviews = reviews.slice(4, 6);
+  const horizontalReviews = reviews.slice(4);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
@@ -98,7 +104,7 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
         <ReviewItem key={index} review={review} />
       ))}
       <div className="md:col-span-2">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {horizontalReviews.map((review, index) => (
             <ReviewItem key={index} review={review} />
           ))}
@@ -110,12 +116,6 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
 
 const Reviews = () => {
   const navigate = useNavigate();
-  const emperorReview = {
-    name: "SG/αD 皇帝",
-    rating: 5,
-    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
-    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
-  };
 
   return (
     <div className="min-h-screen bg-navy">
@@ -163,7 +163,6 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            <ReviewItem review={emperorReview} />
           </div>
         </div>
 
