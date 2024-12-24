@@ -23,28 +23,16 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
   },
   {
-    name: "【αD Aves】 ひよ",
-    rating: 5,
-    text: "Coreサックは破れづらく耐久性もあり、滑りが程よく締め付け感もいいです。色んな指サックを転々と使ってきましたが、一番安定して実力が出せる指サックだと思います。",
-    secondImage: "/lovable-uploads/228d777f-aea3-40e6-94e8-c132d49e5dd9.png"
-  },
-  {
     name: "【αD Aves べてぃ】",
     rating: 5,
     text: "毛玉が出ないのと、長持ちするためコスパが良い！",
     secondImage: "/lovable-uploads/538cc242-f436-4151-bd4a-892b1dae7174.png"
   },
   {
-    name: "【αD Aves】 たけし",
+    name: "【αD Aves】 ひよ",
     rating: 5,
-    text: "操作性が抜群で反応も素晴らしいです。普段使いにも最適で、プロのプレイヤーにもおすすめできます！",
-    secondImage: "/lovable-uploads/pro_player_new_icon.png"
-  },
-  {
-    name: "SG/αD 皇帝",
-    rating: 5,
-    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
-    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
+    text: "Coreサックは破れづらく耐久性もあり、滑りが程よく締め付け感もいいです。色んな指サックを転々と使ってきましたが、一番安定して実力が出せる指サックだと思います。",
+    secondImage: "/lovable-uploads/228d777f-aea3-40e6-94e8-c132d49e5dd9.png"
   },
   {
     name: "プロゲーマーF",
@@ -83,7 +71,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
             <img
               src={review.secondImage}
               alt={review.name}
-              className={`w-full h-auto rounded-lg object-cover ${
+              className={`w-full h-auto rounded-lg object-cover transform ${
                 isSpecialCard ? "scale-[1.75]" : ""
               }`}
             />
@@ -96,7 +84,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   const verticalReviews = reviews.slice(0, 4);
-  const horizontalReviews = reviews.slice(4);
+  const horizontalReviews = reviews.slice(4, 5);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
@@ -116,6 +104,12 @@ const ReviewList = ({ reviews }: { reviews: Review[] }) => {
 
 const Reviews = () => {
   const navigate = useNavigate();
+  const emperorReview = {
+    name: "SG/αD 皇帝",
+    rating: 5,
+    text: "風呂上りや手汗で滑りにくい時があったけどCoreサックを使うと滑りが良いし解決する！",
+    secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
+  };
 
   return (
     <div className="min-h-screen bg-navy">
@@ -163,6 +157,7 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
+            <ReviewItem review={emperorReview} />
           </div>
         </div>
 
