@@ -8,57 +8,51 @@
 
   <!-- 
     ▼ OGPタグ (Discord, LINE, Slack, LinkedIn, Facebook など)
-       1200×628 画像を指定している例
+       1200×628 画像を設定している例
   -->
   <meta property="og:title" content="CORE E-SPORTS" />
   <meta property="og:description" content="ゲームプレイヤーのための最高品質を追求します" />
-  <meta property="og:image" content="https://core-gg.com/core-esports-twitter-1200x628.png" />
+  <meta property="og:image" content="https://core-gg.com/core-esports-twitter-1280x628.png" />
   <meta property="og:url" content="https://core-gg.com" />
   <meta property="og:type" content="website" />
 
   <!-- 
-    ▼ Twitterカード設定 (summary_large_image 形式)
-       同じ 1200×628 画像を指定
+    ▼ Twitterカード (summary_large_image)
+       同じ 1200×628 の画像を指定
   -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CORE E-SPORTS" />
   <meta name="twitter:description" content="ゲームプレイヤーのための最高品質を追求します" />
-  <meta name="twitter:image" content="https://core-gg.com/core-esports-twitter-1200x628.png" />
+  <meta name="twitter:image" content="https://core-gg.com/core-esports-twitter-1280x628.png" />
 
-  <!-- 
-    ▼ favicon (ブラウザのタブアイコン) → /favicon.png
-  -->
+  <!-- ▼ favicon（ブラウザのファビコン） -->
   <link rel="icon" href="/favicon.png" type="image/png" />
 
-  <!-- 
-    ▼ iOS ホーム画面アイコン
-    180x180 でアップ済みなので、sizes="180x180" を指定
-  -->
+  <!-- ▼ iOS ホーム画面アイコン -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
 
-  <!-- 
-    ▼ Windowsピン留め用 (msapplication)
-    144x144 でアップ済み
-    ついでに background color 用に TileColor も設定
-  -->
+  <!-- ▼ Windowsピン留め用 (msapplication) -->
   <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
 
   <!-- 
-    ▼ Vite/React等を使っている場合のエントリーポイント (例: src/main.tsx)
-    もしハッシュ付きのファイルを手動で指定しているなら、削除 or コメントアウト
+    ▼ Vite/React等を使うときのエントリポイント
+       もし "src/main.tsx" などを使うなら下のように書く。
+       (いまはコメントアウトしてます。必要に応じてアンコメント)
+
+  <!--
+  <script type="module" src="/src/main.tsx"></script>
   -->
 
-  <!-- 
-    ▼ 必要ならCDNスクリプト等を追加
+  <!-- ▼ gh-pages用のビルド済みファイル参照はコメントアウト (不要)
+  <script type="module" crossorigin src="/assets/index-BX53_e0.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-Dl1qrrOg.js" />
+  <link rel="modulepreload" crossorigin href="/assets/ui-x9W2Lm9.js" />
+  <link rel="stylesheet" crossorigin href="/assets/index-EfX364b7.css" />
   -->
-  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-  <script type="module" crossorigin src="/assets/index-BXS3_e0-.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/vendor-DI1qrrOg.js">
-  <link rel="modulepreload" crossorigin href="/assets/ui-x9w2L9Fm.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-EFx364b7.css">
+
 </head>
 <body>
   <div id="root"></div>
 </body>
-</html>
+</
