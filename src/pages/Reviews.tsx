@@ -35,6 +35,12 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/228d777f-aea3-40e6-94e8-c132d49e5dd9.png"
   },
   {
+    name: "【αD Aves】 たけし",
+    rating: 5,
+    text: "操作性が抜群で反応も素晴らしいです。普段使いにも最適で、プロのプレイヤーにもおすすめできます！",
+    secondImage: "/lovable-uploads/pro_player_new_icon.png"
+  },
+  {
     name: "プロゲーマーF",
     rating: 5,
     text: "素材の品質が素晴らしく、プレイ中のストレスが大幅に軽減されました。まさにプロ仕様の逸品です。",
@@ -84,7 +90,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
   const verticalReviews = reviews.slice(0, 4);
-  const horizontalReviews = reviews.slice(4, 5);
+  const horizontalReviews = reviews.slice(4, 6);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:w-2/3">
