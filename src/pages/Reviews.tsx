@@ -35,10 +35,10 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/bce2de37-351b-407e-9bc9-393652a56ab3.png"
   },
   {
-    name: "eスポーツ選手E",
+    name: "【αD Aves】 ひよ",
     rating: 5,
-    text: "国際大会での使用実績もあり、信頼性は折り紙付きです。プロの要求に応える最高峰の製品です。",
-    secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
+    text: "Coreサックは破れづらく耐久性もあり、滑りが程よく締め付け感もいいです。色んな指サックを転々と使ってきましたが、一番安定して実力が出せる指サックだと思います。",
+    secondImage: "/lovable-uploads/228d777f-aea3-40e6-94e8-c132d49e5dd9.png"
   },
   {
     name: "プロゲーマーF",
