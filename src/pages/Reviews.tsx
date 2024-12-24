@@ -167,7 +167,9 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            {takeshiReview && <ReviewItem review={takeshiReview} />}
+            <div className="w-full h-full">
+              {takeshiReview && <ReviewItem review={takeshiReview} />}
+            </div>
           </div>
         </div>
 
