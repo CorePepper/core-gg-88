@@ -56,10 +56,12 @@ const reviews: Review[] = [
 
 const ReviewItem = ({ review }: { review: Review }) => {
   const isTakeshi = review.name === "【αD Aves】 たけし";
-  const customClass = isTakeshi ? "mt-2" : ""; // Add top margin only for Takeshi's card
+  const isSpecialCard = review.name === "【αD Aves らいむ】" || 
+                       review.name === "【αD Aves べてぃ】" || 
+                       review.name === "【αD Aves】 ひよ";
 
   return (
-    <div className={`bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col ${customClass}`}>
+    <div className="bg-navy-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
       <div className="flex flex-row items-center justify-between mb-4">
         <div className="flex">
           {[...Array(review.rating)].map((_, i) => (
@@ -81,13 +83,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
               src={review.secondImage}
               alt={review.name}
               className={`w-full h-auto rounded-lg object-cover transform ${
-                review.name === "【αD Aves らいむ】" ? "scale-[1.75]" : ""
-              } ${
-                review.name === "【αD Aves べてぃ】" ? "scale-[1.75]" : ""
-              } ${
-                review.name === "【αD Aves】 ひよ" ? "scale-[1.75]" : ""
-              } ${
-                review.name === "【αD Aves】 たけし" ? "scale-[1.75]" : ""
+                isSpecialCard ? "scale-[1.75]" : ""
               }`}
             />
           </div>
@@ -167,7 +163,6 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-            {/* Add たけし's review card in the red area */}
             <div className="w-full mt-4">
               {takeshiReview && <ReviewItem review={takeshiReview} />}
             </div>
