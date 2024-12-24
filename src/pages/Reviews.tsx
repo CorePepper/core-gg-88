@@ -86,7 +86,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
             <img
               src={review.secondImage}
               alt={review.name}
-              className={`w-full h-auto rounded-lg object-cover ${
+              className={`w-full h-auto rounded-lg object-cover transform ${
                 isSpecialCard ? "scale-[1.75]" : ""
               }`}
             />
