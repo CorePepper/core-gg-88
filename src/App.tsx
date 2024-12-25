@@ -5,26 +5,26 @@ import { TooltipProvider } from "@components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// ▼ 以下の2つを「src/pages/」に置いている前提。
-//    もしフォルダ名が違う場合は importパスを調整してください。
+// ▼ 以下2つのコンポーネントを使う前提。
+//    src/pages/Index.tsx と src/pages/Reviews.tsx に置いておきます。
 import Index from "./pages/Index";
 import Reviews from "./pages/Reviews";
 
-// React Query 用のクライアントを生成
+// React Query 用のクライアントを作成
 const queryClient = new QueryClient();
 
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        {/* トースト通知用コンポーネント (Sonner) */}
+        {/* トースト通知用コンポーネント（Sonner） */}
         <Sonner />
 
         <BrowserRouter>
           <Routes>
             {/* 
-              path="/" でアクセスしたときは <Index /> を表示 
-              path="/reviews" なら <Reviews /> を表示
+              "/" にアクセスしたら Index を表示
+              "/reviews" にアクセスしたら Reviews を表示
             */}
             <Route path="/" element={<Index />} />
             <Route path="/reviews" element={<Reviews />} />
