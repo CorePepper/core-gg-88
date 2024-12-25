@@ -36,16 +36,14 @@
   <meta name="msapplication-TileColor" content="#FFFFFF" />
 
   <!-- 
-    ▼ Vite/Reactなどを使う場合のエントリーポイント例 (src/main.tsx)
-    使うならコメントを外し、プロジェクト構成に合わせてください。
-
-    <script type="module" src="/src/main.tsx"></script>
+    ▼ Vite/Reactを使う場合のエントリーポイント
+    ※ ここが超重要です
   -->
+  <script type="module" src="/src/main.tsx"></script>
 
   <!-- 
-    ▼ 以前gh-pagesで使われていた「ビルド済みファイル」の呼び出しはコメントアウト
-    ▼ ViteのActionsビルドとは競合する恐れがあるため、通常は不要です。
-
+    ▼ 以前gh-pagesで使われていたビルド済みファイルは通常不要なためコメントアウト
+    ▼ 必要な場合のみ、下記を有効にしてください。
     <script type="module" crossorigin src="/assets/index-BX53_e0.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-Dl1qrrOg.js" />
     <link rel="modulepreload" crossorigin href="/assets/ui-x9W2Lm9.js" />
