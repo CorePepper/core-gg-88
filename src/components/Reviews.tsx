@@ -1,3 +1,4 @@
+// src/components/Reviews.tsx
 import { Star } from "lucide-react";
 
 const reviews = [
@@ -21,7 +22,7 @@ const reviews = [
 const Reviews = () => {
   return (
     <section className="py-20 bg-navy relative overflow-hidden">
-      {/* Background */}
+      {/* 背景画像やグラデーション */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy/80" />
         <div className="absolute inset-0 bg-[url('/lovable-uploads/0f17d324-4e96-4f45-91f4-229883758a92.png')] bg-cover bg-center opacity-30" />
