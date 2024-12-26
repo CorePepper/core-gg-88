@@ -1,5 +1,3 @@
-// src/pages/Reviews.tsx
-
 import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
@@ -65,7 +63,7 @@ const reviews: Review[] = [
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
   },
   {
-    name: "プロゲーマーI",
+    name: "ゲーム",
     rating: 5,
     text: "細部まで考え抜かれた設計で、プレイヤーの要望に完璧に応えてくれる製品です。",
     secondImage: "/lovable-uploads/34f745ce-d519-4a16-a1ca-e788b0dec542.png"
@@ -77,11 +75,9 @@ const Reviews = () => {
   const isMobile = useIsMobile();
   
   useEffect(() => {
-    // ページ表示時に画面トップへスクロール
     window.scrollTo(0, 0);
   }, []);
 
-  // 特別なレビュー（皇帝）
   const emperorReview = {
     name: "SG/αD 皇帝",
     rating: 5,
@@ -89,11 +85,12 @@ const Reviews = () => {
     secondImage: "/lovable-uploads/e8c03b06-e531-4dda-83fb-fee52cf33eb9.png"
   };
 
-  // Mobileなら皇帝レビューを先頭に、わずぼーんを2番目にする
+  // Filter and reorder reviews for mobile
   const getOrderedReviews = () => {
     let filteredReviews = [...reviews];
     
     if (isMobile) {
+      // For mobile: Add emperor at the start, keep わずぼーん second
       const wazIndex = filteredReviews.findIndex(r => r.name === "わずぼーん");
       const wazItem = filteredReviews.splice(wazIndex, 1)[0];
       return [emperorReview, wazItem, ...filteredReviews];
@@ -106,7 +103,6 @@ const Reviews = () => {
     <div className="min-h-screen bg-navy">
       <Navigation />
       <div className="container mx-auto px-4 py-20">
-        {/* 戻るボタン */}
         <button
           onClick={() => navigate(-1)}
           className="inline-flex items-center px-6 py-3 bg-navy-light/80 backdrop-blur-sm text-gold hover:text-gold-light hover:bg-navy-light transition-all duration-300 rounded-lg shadow-lg mb-8 group"
@@ -115,18 +111,14 @@ const Reviews = () => {
           戻る
         </button>
 
-        {/* タイトル */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">プロ選手の声</h1>
           <p className="text-xl text-gold">プロのプレイヤーから寄せられた感想</p>
         </div>
 
-        {/* レビューリストとサイド */}
         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
-          {/* レビュー一覧 */}
           <ReviewList reviews={getOrderedReviews()} />
-
-          {/* 右カラム (画像 & リンクボタン等) */}
+          
           <div className="lg:w-1/3 flex flex-col items-stretch gap-8">
             <img
               src="/lovable-uploads/92f6c11c-45d0-451a-b318-857720b23e06.png"
@@ -153,8 +145,6 @@ const Reviews = () => {
                 <ArrowLeft className="ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
-
-            {/* PC環境では、皇帝レビューを右カラムに単独表示 */}
             {!isMobile && <ReviewItem review={emperorReview} />}
           </div>
         </div>

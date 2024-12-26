@@ -1,51 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CORE E-SPORTS</title>
-  <meta name="description" content="CORE E-Sportsはゲームプレイヤーのための最高品質を追求します" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%VITE_SITE_TITLE%</title>
+    <meta name="description" content="%VITE_SITE_DESCRIPTION%" />
+    <meta name="author" content="CORE E-Sports" />
+    <meta property="og:image" content="%VITE_OG_IMAGE%" />
+    <link rel="preconnect" href="https://cdn.gpteng.co" />
+    <link rel="dns-prefetch" href="https://cdn.gpteng.co" />
+  </head>
 
-  <!-- ▼ OGPタグ (Discord, LINE, Slack, LinkedIn, Facebook など) -->
-  <meta property="og:title" content="CORE E-SPORTS" />
-  <meta property="og:description" content="ゲームプレイヤーのための最高品質を追求します" />
-  <meta property="og:image" content="https://core-gg.com/core-esports-twitter-1280x628.png" />
-  <meta property="og:url" content="https://core-gg.com" />
-  <meta property="og:type" content="website" />
-
-  <!-- ▼ Twitterカード設定（summary_large_image 形式） -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CORE E-SPORTS" />
-  <meta name="twitter:description" content="ゲームプレイヤーのための最高品質を追求します" />
-  <meta name="twitter:image" content="https://core-gg.com/core-esports-twitter-1280x628.png" />
-
-  <!-- ▼ favicon（ブラウザのファビコン） -->
-  <link rel="icon" href="/favicon.png" type="image/png" />
-
-  <!-- ▼ iOS ホーム画面アイコン -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-
-  <!-- ▼ Windowsピン留め用 (msapplication) -->
-  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
-  <meta name="msapplication-TileColor" content="#FFFFFF" />
-
-  <!--
-    ▼ Vite/Reactを使う場合のエントリーポイント
-    ここが超重要です。絶対にコメントアウトしないでください。
-  -->
-  <script type="module" src="/src/main.tsx"></script>
-
-  <!--
-    ▼ 以前に gh-pages で使われていたビルド済みファイル呼び出しは不要なのでコメントアウト。
-       必要あれば復活させてください。
-    
-    <script type="module" crossorigin src="/assets/index-BX53_e0.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor-Dl1qrrOg.js" />
-    <link rel="modulepreload" crossorigin href="/assets/ui-x9W2Lm9.js" />
-    <link rel="stylesheet" crossorigin href="/assets/index-EfX364b7.css" />
-  -->
-</head>
-<body>
-  <div id="root"></div>
-</body>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
